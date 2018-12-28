@@ -1,0 +1,523 @@
+focus_tree = { 
+id = RoughRomanMemes
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = RMM 
+} 
+} 
+#Focus for The Sicilian accident
+focus = { 
+id = RMM_thesicilianaccident
+icon = GFX_goal_generic_attack_allies
+x = 14
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_conquestofthegauls } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The death of Caesar
+focus = { 
+id = RMM_thedeathofcaesar
+icon = GFX_thedeathofcaesar
+x = 5
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_revivethesenate focus = RMM_keeptheemperorinpower } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Logistics for Roman takeover
+focus = { 
+id = RMM_logisticsforromantakeover
+icon = GFX_goal_generic_position_armies
+x = 7
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 4
+ } 
+
+ } 
+
+#Focus for Vassalize our former allies
+focus = { 
+id = RMM_vassalizeourformerallies
+icon = GFX_focus_rom_royal_dictatorship
+x = 13
+y = 8
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_conquerthelowlands } 
+prerequisite = { focus = RMM_thesicilianaccident } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Forts on the alpine line
+focus = { 
+id = RMM_fortsonthealpineline
+icon = GFX_goal_generic_fortify_city
+x = 2
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_proposeaproperalliance } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Learn from the superior siege weapon
+focus = { 
+id = RMM_learnfromthesuperiorsiegeweapon
+icon = GFX_goal_tfv_generic_tech_sharing
+x = 2
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_fortsonthealpineline } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Pin the throne
+focus = { 
+id = RMM_pinthethrone
+icon = GFX_pinthethrone
+x = 0
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_demandlowerrsequelmemes } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Demand lower /r/Sequelmemes
+focus = { 
+id = RMM_demandlowerrsequelmemes
+icon = GFX_goal_generic_forceful_treaty
+x = 0
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_proposeaproperalliance } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Colonize Carthage
+focus = { 
+id = RMM_colonizecarthage
+icon = GFX_colonizecarthage
+x = 17
+y = 8
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_expandthesaltindustries } 
+prerequisite = { focus = RMM_restorebyzantium } 
+prerequisite = { focus = RMM_thesicilianaccident } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Play the rivalry of on each other
+focus = { 
+id = RMM_playtherivalryofoneachother
+icon = GFX_goal_generic_military_deal
+x = 8
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_logisticsforromantakeover } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Propaganda and Claimant
+focus = { 
+id = RMM_propagandaandclaimant
+icon = GFX_goal_generic_propaganda
+x = 6
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_logisticsforromantakeover } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Seize Rome
+focus = { 
+id = RMM_seizerome
+icon = GFX_seizerome
+x = 7
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_propagandaandclaimant } 
+prerequisite = { focus = RMM_playtherivalryofoneachother } 
+ai_will_do = { 
+ factor = 4
+ } 
+
+ } 
+
+#Focus for Roman Italy
+focus = { 
+id = RMM_romanitaly
+icon = GFX_focus_generic_italy_first
+x = 7
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_seizerome } 
+ai_will_do = { 
+ factor = 4
+ } 
+
+ } 
+
+#Focus for Propose a proper alliance
+focus = { 
+id = RMM_proposeaproperalliance
+icon = GFX_goal_generic_improve_relations
+x = 3
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_romanitaly } 
+mutually_exclusive = { focus = RMM_gloryofrome } 
+ai_will_do = { 
+ factor = 4
+ } 
+
+ } 
+
+#Focus for Glory of Rome
+focus = { 
+id = RMM_gloryofrome
+icon = GFX_gloryofrome
+x = 11
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_romanitaly } 
+mutually_exclusive = { focus = RMM_proposeaproperalliance } 
+mutually_exclusive = { focus = RMM_proposeaproperalliance } 
+mutually_exclusive = { focus = RMM_proposeaproperalliance } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Religious debate
+focus = { 
+id = RMM_religiousdebate
+icon = GFX_religiousdebate
+x = 9
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_gloryofrome } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Prefer Christendom
+focus = { 
+id = RMM_preferchristendom
+icon = GFX_preferchristendom
+x = 10
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_religiousdebate } 
+mutually_exclusive = { focus = RMM_preferhellenism } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Prefer Hellenism
+focus = { 
+id = RMM_preferhellenism
+icon = GFX_preferhellenism
+x = 8
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_religiousdebate } 
+mutually_exclusive = { focus = RMM_preferchristendom } 
+mutually_exclusive = { focus = RMM_preferchristendom } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Crusader Kings
+focus = { 
+id = RMM_crusaderkings
+icon = GFX_focus_generic_strike_at_democracy1
+x = 10
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_preferchristendom } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Mend the Great schism
+focus = { 
+id = RMM_mendthegreatschism
+icon = GFX_mendthegreatschism
+x = 10
+y = 8
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_crusaderkings } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Pax Deorum
+focus = { 
+id = RMM_paxdeorum
+icon = GFX_goal_generic_national_unity
+x = 8
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_preferhellenism } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Reform Hellenism
+focus = { 
+id = RMM_reformhellenism
+icon = GFX_reformhellenism
+x = 8
+y = 8
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_paxdeorum } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Political debate
+focus = { 
+id = RMM_politicaldebate
+icon = GFX_goal_generic_neutrality_focus
+x = 5
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_gloryofrome focus = RMM_proposeaproperalliance } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Keep the emperor in power
+focus = { 
+id = RMM_keeptheemperorinpower
+icon = GFX_keeptheemperorinpower
+x = 6
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_politicaldebate } 
+mutually_exclusive = { focus = RMM_revivethesenate } 
+mutually_exclusive = { focus = RMM_revivethesenate } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Revive the senate
+focus = { 
+id = RMM_revivethesenate
+icon = GFX_focus_generic_the_giant_wakes
+x = 4
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_politicaldebate } 
+mutually_exclusive = { focus = RMM_keeptheemperorinpower } 
+mutually_exclusive = { focus = RMM_keeptheemperorinpower } 
+mutually_exclusive = { focus = RMM_keeptheemperorinpower } 
+mutually_exclusive = { focus = RMM_keeptheemperorinpower } 
+mutually_exclusive = { focus = RMM_keeptheemperorinpower } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Imperial Conquest
+focus = { 
+id = RMM_imperialconquest
+icon = GFX_goal_generic_more_territorial_claims
+x = 15
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_gloryofrome } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Conquest of the Gauls
+focus = { 
+id = RMM_conquestofthegauls
+icon = GFX_conquestofthegauls
+x = 12
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_imperialconquest } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Revenge on the Huns
+focus = { 
+id = RMM_revengeonthehuns
+icon = GFX_revengeonthehuns
+x = 16
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_imperialconquest } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Restore Byzantium
+focus = { 
+id = RMM_restorebyzantium
+icon = GFX_restorebyzantium
+x = 16
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_revengeonthehuns } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Expand the salt industries
+focus = { 
+id = RMM_expandthesaltindustries
+icon = GFX_goal_generic_construct_infrastructure
+x = 18
+y = 7
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Conquer the lowlands
+focus = { 
+id = RMM_conquerthelowlands
+icon = GFX_goal_generic_major_war
+x = 12
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_conquestofthegauls } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Revenge on the Ottomans
+focus = { 
+id = RMM_revengeontheottomans
+icon = GFX_revengeontheottomans
+x = 15
+y = 8
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_restorebyzantium } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Invade /r/Waluigi
+focus = { 
+id = RMM_invaderwaluigi
+icon = GFX_goal_generic_more_territorial_claims
+x = 1
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RMM_pinthethrone } 
+prerequisite = { focus = RMM_learnfromthesuperiorsiegeweapon } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#End of focuses 
+ }

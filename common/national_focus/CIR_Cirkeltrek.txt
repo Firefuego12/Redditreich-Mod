@@ -1,0 +1,663 @@
+focus_tree = { 
+id = Cirkeltrek
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = CIR 
+} 
+} 
+#Focus for Maurits Army school
+focus = { 
+id = CIR_mauritsarmyschool
+icon = GFX_mauritsarmyschool
+x = 25
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_trainswissguards } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Stille Willem
+focus = { 
+id = CIR_stillewillem
+icon = GFX_stillewillem
+x = 7
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 7
+ } 
+completion_reward = { 
+add_stability = 0.1
+
+create_country_leader = { name = "Stille I" desc = "POLITICS_STILLE_I_DESC" picture = "Portrait_Stille_I.dds" expire = "1965.1.1" ideology = fascism traits = { } }
+ } 
+
+ } 
+
+#Focus for Specerijen
+focus = { 
+id = CIR_specerijen
+icon = GFX_specerijen
+x = 2
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_stillewillem } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Fijn Uitgedoste Barbaar
+focus = { 
+id = CIR_fijnuitgedostebarbaar
+icon = GFX_fijnuitgedostebarbaar
+x = 7
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_stillewillem } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Zuid-Nederland
+focus = { 
+id = CIR_zuidnederland
+icon = GFX_zuidnederland
+x = 12
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_stillewillem } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Jan Pieterszoon Coen did nothing wrong
+focus = { 
+id = CIR_janpieterszooncoendidnothingwrong
+icon = GFX_janpieterszooncoendidnothingwrong
+x = 0
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_specerijen } 
+ai_will_do = { 
+ factor = 2
+ } 
+completion_reward = { 
+add_stability = 0.1
+ } 
+
+ } 
+
+#Focus for Verwijder kokosnoot
+focus = { 
+id = CIR_verwijderkokosnoot
+icon = GFX_verwijderkokosnoot
+x = 0
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_janpieterszooncoendidnothingwrong } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power = 50
+ } 
+
+ } 
+
+#Focus for Oorlog op Angelsaksheid
+focus = { 
+id = CIR_oorlogopangelsaksheid
+icon = GFX_focus_RAJ_clamp_down_on_corruption
+x = 3
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_specerijen } 
+ai_will_do = { 
+ factor = 4
+ } 
+
+ } 
+
+#Focus for Bring freefolk a golden century
+focus = { 
+id = CIR_bringfreefolkagoldencentury
+icon = GFX_goal_tfv_strengthen_commonwealth_ties
+x = 9
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_fijnuitgedostebarbaar } 
+mutually_exclusive = { focus = CIR_theunholyalliance } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_theunholyalliance } 
+mutually_exclusive = { focus = CIR_theunholyalliance } 
+mutually_exclusive = { focus = CIR_theunholyalliance } 
+mutually_exclusive = { focus = CIR_theunholyalliance } 
+mutually_exclusive = { focus = CIR_theunholyalliance } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The unholy alliance
+focus = { 
+id = CIR_theunholyalliance
+icon = GFX_goal_generic_dangerous_deal
+x = 5
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_fijnuitgedostebarbaar } 
+mutually_exclusive = { focus = CIR_bringfreefolkagoldencentury } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_bringfreefolkagoldencentury } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_bringfreefolkagoldencentury } 
+mutually_exclusive = { focus = CIR_bringfreefolkagoldencentury } 
+mutually_exclusive = { focus = CIR_bringfreefolkagoldencentury } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+mutually_exclusive = { focus = CIR_thenetherlandsstandalone } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Netherlands stand alone!
+focus = { 
+id = CIR_thenetherlandsstandalone
+icon = GFX_thenetherlandsstandalone
+x = 7
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_fijnuitgedostebarbaar } 
+mutually_exclusive = { focus = CIR_bringfreefolkagoldencentury } 
+mutually_exclusive = { focus = CIR_theunholyalliance } 
+mutually_exclusive = { focus = CIR_theunholyalliance } 
+mutually_exclusive = { focus = CIR_bringfreefolkagoldencentury } 
+mutually_exclusive = { focus = CIR_bringfreefolkagoldencentury } 
+mutually_exclusive = { focus = CIR_bringfreefolkagoldencentury } 
+mutually_exclusive = { focus = CIR_bringfreefolkagoldencentury } 
+ai_will_do = { 
+ factor = 4
+ } 
+
+ } 
+
+#Focus for Bring Willem back on the throne
+focus = { 
+id = CIR_bringwillembackonthethrone
+icon = GFX_bringwillembackonthethrone
+x = 5
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_blockadeanglosaxontrade } 
+prerequisite = { focus = CIR_oorlogopangelsaksheid } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Blockade Anglo-Saxon trade
+focus = { 
+id = CIR_blockadeanglosaxontrade
+icon = GFX_goal_generic_trade
+x = 6
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_thenetherlandsstandalone focus = CIR_theunholyalliance } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Remember the zilvervloot!
+focus = { 
+id = CIR_rememberthezilvervloot
+icon = GFX_rememberthezilvervloot
+x = 8
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_bringfreefolkagoldencentury focus = CIR_thenetherlandsstandalone } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Institute the Rijkskolonies!
+focus = { 
+id = CIR_institutetherijkskolonies
+icon = GFX_institutetherijkskolonies
+x = 2
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_specerijen } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for War with the Spanjolen
+focus = { 
+id = CIR_warwiththespanjolen
+icon = GFX_goal_generic_major_war
+x = 9
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_operationsavethesint } 
+prerequisite = { focus = CIR_rememberthezilvervloot } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for BELGICA's results
+focus = { 
+id = CIR_belgicasresults
+icon = GFX_belgicasresults
+x = 12
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_zuidnederland } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Operation save the SInt!
+focus = { 
+id = CIR_operationsavethesint
+icon = GFX_operationsavethesint
+x = 10
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_belgicasresults } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Ultimatum to the south
+focus = { 
+id = CIR_ultimatumtothesouth
+icon = GFX_ultimatumtothesouth
+x = 12
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_belgicasresults } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Attempt to solve Dutch subreddit divide
+focus = { 
+id = CIR_attempttosolvedutchsubredditdivide
+icon = GFX_attempttosolvedutchsubredditdivide
+x = 21
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_expandfrikandelbroodjesproduction } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Expand frikandelbroodjes production
+focus = { 
+id = CIR_expandfrikandelbroodjesproduction
+icon = GFX_expandfrikandelbroodjesproduction
+x = 17
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Polderen
+focus = { 
+id = CIR_polderen
+icon = GFX_goal_generic_construction2
+x = 16
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_expandfrikandelbroodjesproduction } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Dutch naval heritage
+focus = { 
+id = CIR_dutchnavalheritage
+icon = GFX_goal_generic_build_navy
+x = 14
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_polderen } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Jan van Speijk did nothing wrong
+focus = { 
+id = CIR_janvanspeijkdidnothingwrong
+icon = GFX_janvanspeijkdidnothingwrong
+x = 14
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_belgicasresults } 
+prerequisite = { focus = CIR_dutchnavalheritage } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Bring back the Sea Beggars
+focus = { 
+id = CIR_bringbacktheseabeggars
+icon = GFX_bringbacktheseabeggars
+x = 16
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_dutchnavalheritage } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Recruit VOC ships
+focus = { 
+id = CIR_recruitvocships
+icon = GFX_recruitvocships
+x = 16
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_bringbacktheseabeggars } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for NS spoorwegen
+focus = { 
+id = CIR_nsspoorwegen
+icon = GFX_nsspoorwegen
+x = 18
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_expandfrikandelbroodjesproduction } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Studio Massa
+focus = { 
+id = CIR_studiomassa
+icon = GFX_studiomassa
+x = 14
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_stillewillem } 
+prerequisite = { focus = CIR_expandfrikandelbroodjesproduction } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Expand the University of Leiden
+focus = { 
+id = CIR_expandtheuniversityofleiden
+icon = GFX_focus_research2
+x = 18
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_nsspoorwegen } 
+prerequisite = { focus = CIR_polderen } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Expand the AIVD
+focus = { 
+id = CIR_expandtheaivd
+icon = GFX_focus_generic_self_management
+x = 18
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_expandtheuniversityofleiden } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Stop Canadian Tulip export
+focus = { 
+id = CIR_stopcanadiantulipexport
+icon = GFX_stopcanadiantulipexport
+x = 16
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_nsspoorwegen } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Seek compromises with ik_ihe
+focus = { 
+id = CIR_seekcompromiseswithikihe
+icon = GFX_goal_generic_major_alliance
+x = 20
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_attempttosolvedutchsubredditdivide } 
+mutually_exclusive = { focus = CIR_degrotezuivering } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for De Grote Zuivering
+focus = { 
+id = CIR_degrotezuivering
+icon = GFX_goal_generic_political_pressure
+x = 22
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_attempttosolvedutchsubredditdivide } 
+mutually_exclusive = { focus = CIR_seekcompromiseswithikihe } 
+mutually_exclusive = { focus = CIR_seekcompromiseswithikihe } 
+ai_will_do = { 
+ factor = 4
+ } 
+
+ } 
+
+#Focus for A union of Dutch subreddits
+focus = { 
+id = CIR_aunionofdutchsubreddits
+icon = GFX_goal_generic_national_unity
+x = 20
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_seekcompromiseswithikihe } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Assassinate Oldenbarnevelt
+focus = { 
+id = CIR_assassinateoldenbarnevelt
+icon = GFX_assassinateoldenbarnevelt
+x = 22
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_degrotezuivering } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Train Swiss Guards
+focus = { 
+id = CIR_trainswissguards
+icon = GFX_trainswissguards
+x = 24
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Expand Schiphol
+focus = { 
+id = CIR_expandschiphol
+icon = GFX_goal_generic_build_airforce
+x = 28
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Blue Gaurd
+focus = { 
+id = CIR_bluegaurd
+icon = GFX_focus_generic_little_entente
+x = 23
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_trainswissguards } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Prevent another Rotterdam-Blitz
+focus = { 
+id = CIR_preventanotherrotterdamblitz
+icon = GFX_goal_generic_fortify_city
+x = 27
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_trainswissguards } 
+prerequisite = { focus = CIR_expandschiphol } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Fokker
+focus = { 
+id = CIR_fokker
+icon = GFX_fokker
+x = 29
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = CIR_expandschiphol } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#End of focuses 
+ }

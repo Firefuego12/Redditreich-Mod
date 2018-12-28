@@ -1,0 +1,455 @@
+focus_tree = { 
+id = Belgica
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = BEL 
+} 
+} 
+#Focus for Sossen Riots
+focus = { 
+id = BEL_sossenriots
+icon = GFX_focus_YUG_pan_slavic_congress
+x = 18
+y = 0
+cost = 10
+available_if_capitulated = yes 
+mutually_exclusive = { focus = BEL_policytowardsthercirkeltrekthreat } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Studio Massa
+focus = { 
+id = BEL_studiomassa
+icon = GFX_studiomassa
+x = 14
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_fcdekampioenen } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Fristi
+focus = { 
+id = BEL_fristi
+icon = GFX_fristi
+x = 11
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_sossengenocide focus = BEL_nmbs } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Plopkoeken
+focus = { 
+id = BEL_plopkoeken
+icon = GFX_plopkoeken
+x = 11
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_fristi } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for F.C De Kampioenen
+focus = { 
+id = BEL_fcdekampioenen
+icon = GFX_fcdekampioenen
+x = 14
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_studio100 } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for NMBS
+focus = { 
+id = BEL_nmbs
+icon = GFX_nmbs
+x = 12
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_studio100 } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Recolonize the Congo
+focus = { 
+id = BEL_recolonizethecongo
+icon = GFX_recolonizethecongo
+x = 6
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_prematurestrike } 
+ai_will_do = { 
+ factor = 5
+ } 
+
+ } 
+
+#Focus for Sossen Genocide
+focus = { 
+id = BEL_sossengenocide
+icon = GFX_sossengenocide
+x = 10
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_studio100 } 
+prerequisite = { focus = BEL_policytowardsthercirkeltrekthreat } 
+ai_will_do = { 
+ factor = 6
+ } 
+
+ } 
+
+#Focus for Studio100
+focus = { 
+id = BEL_studio100
+icon = GFX_studio100
+x = 12
+y = 1
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Le Leman Plan
+focus = { 
+id = BEL_lelemanplan
+icon = GFX_lelemanplan
+x = 8
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_fortressbelgica } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Policy Towards the /r/Cirkeltrek Threat
+focus = { 
+id = BEL_policytowardsthercirkeltrekthreat
+icon = GFX_policytowardsthercirkeltrekthreat
+x = 3
+y = 0
+cost = 10
+available_if_capitulated = yes 
+mutually_exclusive = { focus = BEL_sossenriots } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Oranje Appeasement
+focus = { 
+id = BEL_oranjeappeasement
+icon = GFX_oranjeappeasement
+x = 0
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_policytowardsthercirkeltrekthreat } 
+mutually_exclusive = { focus = BEL_seekforeignsupport } 
+mutually_exclusive = { focus = BEL_seekforeignsupport } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Cede Flanders
+focus = { 
+id = BEL_cedeflanders
+icon = GFX_cedeflanders
+x = 0
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_oranjeappeasement } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Sossen Rise Up
+focus = { 
+id = BEL_sossenriseup
+icon = GFX_sossenriseup
+x = 18
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_sossenriots } 
+ai_will_do = { 
+ factor = 4
+ } 
+
+ } 
+
+#Focus for Send a Envoy to the Prequels
+focus = { 
+id = BEL_sendaenvoytotheprequels
+icon = GFX_goal_tripartite_pact
+x = 2
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_seekforeignsupport } 
+mutually_exclusive = { focus = BEL_theminorentente } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Trust the East
+focus = { 
+id = BEL_trusttheeast
+icon = GFX_trusttheeast
+x = 2
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_sendaenvoytotheprequels } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Fortress Belgica
+focus = { 
+id = BEL_fortressbelgica
+icon = GFX_goal_generic_fortify_city
+x = 8
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_seekforeignsupport } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for The Minor Entente
+focus = { 
+id = BEL_theminorentente
+icon = GFX_goal_generic_alliance
+x = 5
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_seekforeignsupport } 
+mutually_exclusive = { focus = BEL_sendaenvoytotheprequels } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Invite /r/Me_IRA
+focus = { 
+id = BEL_invitermeira
+icon = GFX_goal_generic_national_unity
+x = 4
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_theminorentente } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Invite /r/OTmemes
+focus = { 
+id = BEL_inviterotmemes
+icon = GFX_goal_generic_national_unity
+x = 6
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_theminorentente } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Vassalisation
+focus = { 
+id = BEL_vassalisation
+icon = GFX_goal_tfv_strengthen_commonwealth_ties
+x = 0
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_cedeflanders } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Premature Strike
+focus = { 
+id = BEL_prematurestrike
+icon = GFX_goal_generic_more_territorial_claims
+x = 6
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_inviterotmemes } 
+prerequisite = { focus = BEL_invitermeira } 
+prerequisite = { focus = BEL_lelemanplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Seek Foreign Support
+focus = { 
+id = BEL_seekforeignsupport
+icon = GFX_goal_generic_major_alliance
+x = 5
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_policytowardsthercirkeltrekthreat } 
+mutually_exclusive = { focus = BEL_oranjeappeasement } 
+ai_will_do = { 
+ factor = 4
+ } 
+
+ } 
+
+#Focus for Support the Snap
+focus = { 
+id = BEL_supportthesnap
+icon = GFX_goal_generic_attack_allies
+x = 20
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_sossenriseup } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Join Daddy Thanos
+focus = { 
+id = BEL_joindaddythanos
+icon = GFX_focus_generic_join_comintern
+x = 20
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_supportthesnap } 
+ai_will_do = { 
+ factor = 4
+ } 
+
+ } 
+
+#Focus for Benelux Research
+focus = { 
+id = BEL_beneluxresearch
+icon = GFX_focus_generic_socialist_science
+x = 16
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_forcedekolonisatie } 
+prerequisite = { focus = BEL_reconstruction } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Influence the North
+focus = { 
+id = BEL_influencethenorth
+icon = GFX_goal_generic_war_with_comintern
+x = 18
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_sossenriseup } 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Force "Dekolonisatie"
+focus = { 
+id = BEL_forcedekolonisatie
+icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+x = 18
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_influencethenorth } 
+ai_will_do = { 
+ factor = 2
+ } 
+
+ } 
+
+#Focus for Reconstruction
+focus = { 
+id = BEL_reconstruction
+icon = GFX_goal_generic_soviet_construction
+x = 16
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BEL_sossenriseup } 
+prerequisite = { focus = BEL_studio100 } 
+ai_will_do = { 
+ factor = 4
+ } 
+
+ } 
+
+#End of focuses 
+ }

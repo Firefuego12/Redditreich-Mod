@@ -1,0 +1,935 @@
+focus_tree = { 
+id = PrequelMemes
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = PRE 
+} 
+} 
+#Focus for Mod democracy
+focus = { 
+id = PRE_moddemocracy
+icon = GFX_focus_smiling_buddha
+x = 18
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_anewpath } 
+mutually_exclusive = { focus = PRE_fulldemocracy } 
+mutually_exclusive = { focus = PRE_bureaucraticdemocracy } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Bring balance to the force
+focus = { 
+id = PRE_bringbalancetotheforce
+icon = GFX_focus_generic_anti_fascist_diplomacy
+x = 18
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_isolation } 
+mutually_exclusive = { focus = PRE_ihateyou } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for A new path
+focus = { 
+id = PRE_anewpath
+icon = GFX_goal_generic_navy_cruiser
+x = 14
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_tipthescales } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Full democracy
+focus = { 
+id = PRE_fulldemocracy
+icon = GFX_goal_generic_national_unity
+x = 14
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_anewpath } 
+mutually_exclusive = { focus = PRE_bureaucraticdemocracy } 
+mutually_exclusive = { focus = PRE_moddemocracy } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Bureaucratic democracy
+focus = { 
+id = PRE_bureaucraticdemocracy
+icon = GFX_goal_generic_neutrality_focus
+x = 16
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_anewpath } 
+mutually_exclusive = { focus = PRE_fulldemocracy } 
+mutually_exclusive = { focus = PRE_fulldemocracy } 
+mutually_exclusive = { focus = PRE_moddemocracy } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for I hate you!
+focus = { 
+id = PRE_ihateyou
+icon = GFX_goal_generic_war_with_comintern
+x = 16
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_isolation } 
+mutually_exclusive = { focus = PRE_bringbalancetotheforce } 
+mutually_exclusive = { focus = PRE_bringbalancetotheforce } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Isolation
+focus = { 
+id = PRE_isolation
+icon = GFX_focus_AST_squander_bug
+x = 16
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_bringbalancetothesubreddit } 
+mutually_exclusive = { focus = PRE_helpeachother } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Help each other
+focus = { 
+id = PRE_helpeachother
+icon = GFX_goal_support_fourth_int
+x = 13
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_bringbalancetothesubreddit } 
+mutually_exclusive = { focus = PRE_isolation } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for You are the Senate
+focus = { 
+id = PRE_youarethesenate
+icon = GFX_youarethesenate
+x = 10
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_becomebraveenoughforpolitics } 
+mutually_exclusive = { focus = PRE_iamthesenate } 
+mutually_exclusive = { focus = PRE_iamthesenate } 
+mutually_exclusive = { focus = PRE_wearethesenate } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for I am the Senate
+focus = { 
+id = PRE_iamthesenate
+icon = GFX_iamthesenate
+x = 7
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_becomebraveenoughforpolitics } 
+mutually_exclusive = { focus = PRE_youarethesenate } 
+mutually_exclusive = { focus = PRE_wearethesenate } 
+mutually_exclusive = { focus = PRE_wearethesenate } 
+mutually_exclusive = { focus = PRE_wearethesenate } 
+mutually_exclusive = { focus = PRE_youarethesenate } 
+mutually_exclusive = { focus = PRE_youarethesenate } 
+mutually_exclusive = { focus = PRE_wearethesenate } 
+mutually_exclusive = { focus = PRE_youarethesenate } 
+mutually_exclusive = { focus = PRE_youarethesenate } 
+mutually_exclusive = { focus = PRE_wearethesenate } 
+mutually_exclusive = { focus = PRE_youarethesenate } 
+mutually_exclusive = { focus = PRE_youarethesenate } 
+mutually_exclusive = { focus = PRE_wearethesenate } 
+mutually_exclusive = { focus = PRE_wearethesenate } 
+mutually_exclusive = { focus = PRE_wearethesenate } 
+mutually_exclusive = { focus = PRE_wearethesenate } 
+mutually_exclusive = { focus = PRE_wearethesenate } 
+mutually_exclusive = { focus = PRE_wearethesenate } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Become brave enough for politics
+focus = { 
+id = PRE_becomebraveenoughforpolitics
+icon = GFX_goal_tripartite_pact
+x = 10
+y = 0
+cost = 10
+available_if_capitulated = yes 
+
+ } 
+
+#Focus for Tip the scales
+focus = { 
+id = PRE_tipthescales
+icon = GFX_focus_generic_anti_fascist_diplomacy
+x = 10
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_youarethesenate } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Order 66
+focus = { 
+id = PRE_order66
+icon = GFX_order66
+x = 6
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_iamthesenate } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Recruit clone army
+focus = { 
+id = PRE_recruitclonearmy
+icon = GFX_focus_generic_little_entente
+x = 12
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_prepareforwar } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for We are the Senate
+focus = { 
+id = PRE_wearethesenate
+icon = GFX_wearethesenate
+x = 13
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_becomebraveenoughforpolitics } 
+mutually_exclusive = { focus = PRE_iamthesenate } 
+mutually_exclusive = { focus = PRE_youarethesenate } 
+mutually_exclusive = { focus = PRE_iamthesenate } 
+mutually_exclusive = { focus = PRE_iamthesenate } 
+mutually_exclusive = { focus = PRE_iamthesenate } 
+mutually_exclusive = { focus = PRE_iamthesenate } 
+mutually_exclusive = { focus = PRE_iamthesenate } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Prepare for war
+focus = { 
+id = PRE_prepareforwar
+icon = GFX_goal_generic_major_war
+x = 10
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_tipthescales } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Reform the Alliance
+focus = { 
+id = PRE_reformthealliance
+icon = GFX_goal_generic_alliance
+x = 10
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_prepareforwar } 
+mutually_exclusive = { focus = PRE_unitedgalacticalliance } 
+mutually_exclusive = { focus = PRE_unholyalliance } 
+mutually_exclusive = { focus = PRE_unitedgalacticalliance } 
+mutually_exclusive = { focus = PRE_unholyalliance } 
+mutually_exclusive = { focus = PRE_unholyalliance } 
+mutually_exclusive = { focus = PRE_unholyalliance } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Unholy alliance
+focus = { 
+id = PRE_unholyalliance
+icon = GFX_goal_generic_national_unity
+x = 8
+y = 8
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_unitedgalacticalliance } 
+mutually_exclusive = { focus = PRE_crushourenemy } 
+mutually_exclusive = { focus = PRE_reformthealliance } 
+mutually_exclusive = { focus = PRE_reformthealliance } 
+mutually_exclusive = { focus = PRE_crushourenemy } 
+mutually_exclusive = { focus = PRE_crushourenemy } 
+mutually_exclusive = { focus = PRE_crushourenemy } 
+mutually_exclusive = { focus = PRE_reformthealliance } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for United Galactic Alliance
+focus = { 
+id = PRE_unitedgalacticalliance
+icon = GFX_goal_generic_national_unity
+x = 8
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_prepareforwar } 
+mutually_exclusive = { focus = PRE_reformthealliance }mutually_exclusive = { focus = PRE_ focus = PRE_reformthealliance focus = PRE_reformthealliance focus = PRE_reformthealliance focus = PRE_reformthealliance }ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Crush our enemy
+focus = { 
+id = PRE_crushourenemy
+icon = GFX_goal_generic_major_war
+x = 10
+y = 8
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_unitedgalacticalliance focus = PRE_reformthealliance } 
+mutually_exclusive = { focus = PRE_unholyalliance } 
+mutually_exclusive = { focus = PRE_unholyalliance } 
+mutually_exclusive = { focus = PRE_unholyalliance } 
+mutually_exclusive = { focus = PRE_unholyalliance } 
+mutually_exclusive = { focus = PRE_unholyalliance } 
+mutually_exclusive = { focus = PRE_unholyalliance } 
+mutually_exclusive = { focus = PRE_unholyalliance } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Become Frank
+focus = { 
+id = PRE_becomefrank
+icon = GFX_goal_unknown
+x = 8
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_iamthesenate } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Only one there is.
+focus = { 
+id = PRE_onlyonethereis
+icon = GFX_goal_generic_major_war
+x = 7
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_order66 } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for x
+focus = { 
+id = PRE_x
+icon = GFX_goal_unknown
+x = 2
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for x
+focus = { 
+id = PRE_x
+icon = GFX_goal_unknown
+x = 2
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Protect the old ways
+focus = { 
+id = PRE_protecttheoldways
+icon = GFX_goal_generic_territory_or_war
+x = 9
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_order66 } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Bring balance to the subreddit
+focus = { 
+id = PRE_bringbalancetothesubreddit
+icon = GFX_goal_generic_neutrality_focus
+x = 13
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_wearethesenate } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Traditional allies
+focus = { 
+id = PRE_traditionalallies
+icon = GFX_goal_unknown
+x = 5
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_order66 } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for War at last
+focus = { 
+id = PRE_waratlast
+icon = GFX_goal_generic_major_war
+x = 6
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_protecttheoldways } 
+prerequisite = { focus = PRE_forgeourownpath } 
+prerequisite = { focus = PRE_traditionalallies } 
+prerequisite = { focus = PRE_onlyonethereis } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for One fanbase, one empire
+focus = { 
+id = PRE_onefanbaseoneempire
+icon = GFX_goal_anti_comintern_pact
+x = 6
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_unitednowandalways } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for United, now and always!
+focus = { 
+id = PRE_unitednowandalways
+icon = GFX_focus_jap_manchurian_project
+x = 6
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_waratlast } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Forge our own path
+focus = { 
+id = PRE_forgeourownpath
+icon = GFX_goal_generic_attack_allies
+x = 3
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_order66 } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Not this is pod racing!
+focus = { 
+id = PRE_notthisispodracing
+icon = GFX_notthisispodracing
+x = 24
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_ghostlymenace } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for General Reposti!
+focus = { 
+id = PRE_generalreposti
+icon = GFX_generalreposti
+x = 30
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for [visible confusion]
+focus = { 
+id = PRE_visibleconfusion
+icon = GFX_goal_tfv_generic_tech_sharing
+x = 26
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_copypastafight } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Are you an angel ?
+focus = { 
+id = PRE_areyouanangel
+icon = GFX_areyouanangel
+x = 24
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_notthisispodracing } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The expendables
+focus = { 
+id = PRE_theexpendables
+icon = GFX_goal_generic_secret_weapon
+x = 13
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_helpeachother } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Of course
+focus = { 
+id = PRE_ofcourse
+icon = GFX_goal_tripartite_pact
+x = 13
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_theexpendables } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Not to me
+focus = { 
+id = PRE_nottome
+icon = GFX_goal_unknown
+x = 16
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_theexpendables focus = PRE_ihateyou focus = PRE_bringbalancetotheforce } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Remain true to the prequels
+focus = { 
+id = PRE_remaintruetotheprequels
+icon = GFX_goal_tripartite_pact
+x = 26
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_generalreposti } 
+mutually_exclusive = { focus = PRE_expandtheprequels } 
+mutually_exclusive = { focus = PRE_expandtheprequels } 
+mutually_exclusive = { focus = PRE_expandtheprequels } 
+mutually_exclusive = { focus = PRE_expandtheprequels } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Expand the prequels
+focus = { 
+id = PRE_expandtheprequels
+icon = GFX_goal_generic_production2
+x = 35
+y = 1
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_generalreposti } 
+mutually_exclusive = { focus = PRE_remaintruetotheprequels } 
+mutually_exclusive = { focus = PRE_remaintruetotheprequels } 
+mutually_exclusive = { focus = PRE_remaintruetotheprequels } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for 2008 Clone Wars
+focus = { 
+id = PRE_2008clonewars
+icon = GFX_goal_generic_national_unity
+x = 32
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_expandtheprequels } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for 2003 Clone Wars
+focus = { 
+id = PRE_2003clonewars
+icon = GFX_goal_generic_positive_trade_relations
+x = 38
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_expandtheprequels } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The push for Geonosis
+focus = { 
+id = PRE_thepushforgeonosis
+icon = GFX_goal_poland_goal
+x = 30
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_2008clonewars } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Bring in new padawans
+focus = { 
+id = PRE_bringinnewpadawans
+icon = GFX_goal_generic_small_arms
+x = 32
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_2008clonewars } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Superior in mind we are
+focus = { 
+id = PRE_superiorinmindweare
+icon = GFX_focus_research2
+x = 34
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_2008clonewars } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Protect Coruscant
+focus = { 
+id = PRE_protectcoruscant
+icon = GFX_goal_generic_construct_civ_factory
+x = 36
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_2003clonewars } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Bring in Shaggy
+focus = { 
+id = PRE_bringinshaggy
+icon = GFX_goal_generic_production2
+x = 38
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_2003clonewars } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Something
+focus = { 
+id = PRE_something
+icon = GFX_goal_unknown
+x = 40
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_2003clonewars } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for We're back
+focus = { 
+id = PRE_wereback
+icon = GFX_goal_unknown
+x = 32
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_thepushforgeonosis } 
+prerequisite = { focus = PRE_bringinnewpadawans } 
+prerequisite = { focus = PRE_superiorinmindweare } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Something2
+focus = { 
+id = PRE_something2
+icon = GFX_goal_unknown
+x = 38
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_protectcoruscant } 
+prerequisite = { focus = PRE_bringinshaggy } 
+prerequisite = { focus = PRE_something } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Ghostly menace
+focus = { 
+id = PRE_ghostlymenace
+icon = GFX_focus_smiling_buddha
+x = 24
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_remaintruetotheprequels } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for copy-pasta fight
+focus = { 
+id = PRE_copypastafight
+icon = GFX_focus_generic_little_entente
+x = 26
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_remaintruetotheprequels } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Revenge of the yellow eyes
+focus = { 
+id = PRE_revengeoftheyelloweyes
+icon = GFX_goal_generic_construct_mil_factory
+x = 28
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_remaintruetotheprequels } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for This is where the fun begins
+focus = { 
+id = PRE_thisiswherethefunbegins
+icon = GFX_goal_unknown
+x = 28
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_hellothere } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for I don't like sand
+focus = { 
+id = PRE_idontlikesand
+icon = GFX_idontlikesand
+x = 26
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_visibleconfusion } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The best memes
+focus = { 
+id = PRE_thebestmemes
+icon = GFX_thebestmemes
+x = 26
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_areyouanangel } 
+prerequisite = { focus = PRE_idontlikesand } 
+prerequisite = { focus = PRE_thisiswherethefunbegins } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Hello there
+focus = { 
+id = PRE_hellothere
+icon = GFX_goal_generic_navy_doctrines_tactics
+x = 28
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = PRE_revengeoftheyelloweyes } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#End of focuses 
+ }

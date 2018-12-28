@@ -1,0 +1,646 @@
+focus_tree = { 
+id = FalloutMemes
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = FAL 
+} 
+} 
+#Focus for Parkor is our father
+focus = { 
+id = FAL_parkorisourfather
+icon = GFX_focus_jap_showa_restoration
+x = 18
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_childrenofreese } 
+mutually_exclusive = { focus = FAL_thedivinityasourgodandleader } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_country_leader_trait = religious_head
+ } 
+
+ } 
+
+#Focus for Children of Reese
+focus = { 
+id = FAL_childrenofreese
+icon = GFX_focus_ger_reichskommisariats
+x = 16
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_thegreatparkor } 
+ai_will_do = { 
+ factor = 10
+ } 
+available = { 
+date > 1938.1.1
+ } 
+completion_reward = { 
+add_country_leader_trait = the_savior
+
+add_ideas = FAL_leader_cult
+ } 
+
+ } 
+
+#Focus for Joining the Resistance
+focus = { 
+id = FAL_joiningtheresistance
+icon = GFX_focus_generic_support_the_left_right
+x = 10
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_theenemyofmyenemyismyfriend } 
+mutually_exclusive = { focus = FAL_edenalliance } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+SEQ = { add_to_faction = FAL }
+ } 
+
+ } 
+
+#Focus for Attempt a push on the AlliedHQ
+focus = { 
+id = FAL_attemptapushonthealliedhq
+icon = GFX_goal_generic_political_pressure
+x = 9
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_edenalliance focus = FAL_joiningtheresistance } 
+ai_will_do = { 
+ factor = 7
+ } 
+available = { 
+date > 1940.1.1
+ } 
+completion_reward = { 
+country_event = { days = 1 id = redditreich.9 }
+
+all_countries = { add_opinion_modifier = { target = FAL modifier = treat_to_the_peace }
+ } 
+
+ } 
+
+#Focus for Nuclear Development
+focus = { 
+id = FAL_nucleardevelopment
+icon = GFX_focus_wonderweapons
+x = 14
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_navaleffort } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_tech_bonus = { bonus = 0.5 uses = 2 category = nuclear }
+ } 
+
+ } 
+
+#Focus for Our final has came
+focus = { 
+id = FAL_ourfinalhascame
+icon = GFX_focus_rom_abdicate
+x = 17
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_savingtheworldfromthecollapse } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+country_event = { days = 1 id = redditreich.10 }
+
+add_stability = -1
+
+add_political_power = -100000
+ } 
+
+ } 
+
+#Focus for Proposal to join the Allies
+focus = { 
+id = FAL_proposaltojointheallies
+icon = GFX_goal_generic_dangerous_deal
+x = 10
+y = 3
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_pacificationwiththeallies } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+news_event = redditreich.12
+
+add_opinion_modifier = { target = PRE modifier = friendly_enemy }
+ } 
+
+ } 
+
+#Focus for Pacification with the Allies
+focus = { 
+id = FAL_pacificationwiththeallies
+icon = GFX_goal_anschluss
+x = 10
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_planningourexpansion } 
+mutually_exclusive = { focus = FAL_attackthealliedhq } 
+mutually_exclusive = { focus = FAL_attackthealliedhq } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability = -0.1
+
+add_opinion_modifier = { target = PRE modifier = pacification }
+ } 
+
+ } 
+
+#Focus for Total War
+focus = { 
+id = FAL_totalwar
+icon = GFX_goal_generic_position_armies
+x = 9
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_attemptapushonthealliedhq } 
+ai_will_do = { 
+ factor = 5
+ } 
+complete_tooltip = { 
+If you are a player and took this option expecting to win the war, you probably are high.
+ } 
+completion_reward = { 
+create_wargoal = { type = annex_everything target = PRE }
+ } 
+
+ } 
+
+#Focus for Saving the world from the Collapse
+focus = { 
+id = FAL_savingtheworldfromthecollapse
+icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+x = 17
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_thedivinityasourgodandleader focus = FAL_parkorisourfather } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+create_wargoal = { type = annex_everything target = all_countries }
+
+add_ideas = FAL_stopping_collapse
+ } 
+
+ } 
+
+#Focus for Eden Alliance
+focus = { 
+id = FAL_edenalliance
+icon = GFX_focus_jap_pacific_guardian
+x = 8
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_theenemyofmyenemyismyfriend } 
+mutually_exclusive = { focus = FAL_joiningtheresistance } 
+mutually_exclusive = { focus = FAL_joiningtheresistance } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+create_faction = "fallout_entente_alliance"
+
+add_to_faction = ANI
+ } 
+
+ } 
+
+#Focus for Down with Parkor
+focus = { 
+id = FAL_downwithparkor
+icon = GFX_goal_generic_intelligence_exchange
+x = 6
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_totalfailure } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+start_civil_war = { ideology = democratic size = 0.9 }
+
+add_idea = FAL_the_new_government
+ } 
+
+ } 
+
+#Focus for Conquer Memesaw
+focus = { 
+id = FAL_conquermemesaw
+icon = GFX_focus_generic_self_management
+x = 4
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_invasionofbbaasuccess } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+create_wargoal = { type = annex_everything target = EMP }
+
+create_wargoal = { type = annex_everything target = RIQ }
+
+create_wargoal = { type = annex_everything target = CIM }
+ } 
+
+ } 
+
+#Focus for Total Failure
+focus = { 
+id = FAL_totalfailure
+icon = GFX_goal_anti_comintern_pact
+x = 6
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_thesecondattempt } 
+mutually_exclusive = { focus = FAL_sucessatthesecondcampaign } 
+mutually_exclusive = { focus = FAL_sucessatthesecondcampaign } 
+ai_will_do = { 
+ factor = 10
+ } 
+available = { 
+date > 1939.1.1
+
+BBA = { exists = yes }
+ } 
+completion_reward = { 
+add_political_power = -1000
+
+add_stability = -1
+
+add_popularity = { ideology = democratic popularity = 0.5 }
+ } 
+
+ } 
+
+#Focus for The Antichrist of the Meme Subs
+focus = { 
+id = FAL_theantichristofthememesubs
+icon = GFX_goal_generic_secret_weapon
+x = 12
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_reinforcingourlegitimacy } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+all_neighbor_country = { add_popularity = { idoelogy = fascism popularity 0.1 }
+ } 
+
+ } 
+
+#Focus for Sucess at the second campaign
+focus = { 
+id = FAL_sucessatthesecondcampaign
+icon = GFX_goal_generic_occupy_states_ongoing_war
+x = 4
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_thesecondattempt } 
+mutually_exclusive = { focus = FAL_totalfailure } 
+ai_will_do = { 
+ factor = 10
+ } 
+available = { 
+date > 1939.1.1
+
+BBA = { exists = no }
+ } 
+completion_reward = { 
+create_wargoal = { type = annex_everything target = EPM }
+
+create_wargoal = { type = annex_everything target = RIQ }
+
+add_stability = 0.15
+ } 
+
+ } 
+
+#Focus for Planning our Expansion
+focus = { 
+id = FAL_planningourexpansion
+icon = GFX_goal_generic_major_war
+x = 8
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_thegreatparkor } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_tech_bonus = { bonus = 0.5 uses = 2 category = armor }
+
+army_experience = 15
+ } 
+
+ } 
+
+#Focus for The Second Attempt
+focus = { 
+id = FAL_thesecondattempt
+icon = GFX_goal_rhineland
+x = 6
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_failureintheinvasionofbba } 
+ai_will_do = { 
+ factor = 10
+ } 
+available = { 
+date > 1937.9.1
+
+BBA = { exists = yes }
+ } 
+completion_reward = { 
+declare_war_on = { target = BBA type = puppet }
+ } 
+
+ } 
+
+#Focus for Failure in the invasion of BBA
+focus = { 
+id = FAL_failureintheinvasionofbba
+icon = GFX_goal_generic_position_armies
+x = 6
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_invadingbba } 
+mutually_exclusive = { focus = FAL_invasionofbbaasuccess } 
+mutually_exclusive = { focus = FAL_invasionofbbaasuccess } 
+mutually_exclusive = { focus = FAL_invasionofbbaasuccess } 
+mutually_exclusive = { focus = FAL_invasionofbbaasuccess } 
+mutually_exclusive = { focus = FAL_invasionofbbaasuccess } 
+mutually_exclusive = { focus = FAL_invasionofbbaasuccess } 
+mutually_exclusive = { focus = FAL_invasionofbbaasuccess } 
+mutually_exclusive = { focus = FAL_invasionofbbaasuccess } 
+mutually_exclusive = { focus = FAL_invasionofbbaasuccess } 
+mutually_exclusive = { focus = FAL_invasionofbbaasuccess } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+all_country = { add_opinion_modifier = { target = FAL modifier = weak_country }
+add_stability = -0.15
+add_ideas = FAL_revenge
+ } 
+
+ } 
+
+#Focus for Invasion of BBA a success
+focus = { 
+id = FAL_invasionofbbaasuccess
+icon = GFX_goal_generic_demand_territory
+x = 4
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_invadingbba } 
+mutually_exclusive = { focus = FAL_failureintheinvasionofbba } 
+mutually_exclusive = { focus = FAL_failureintheinvasionofbba } 
+mutually_exclusive = { focus = FAL_failureintheinvasionofbba } 
+mutually_exclusive = { focus = FAL_failureintheinvasionofbba } 
+mutually_exclusive = { focus = FAL_failureintheinvasionofbba } 
+mutually_exclusive = { focus = FAL_failureintheinvasionofbba } 
+mutually_exclusive = { focus = FAL_failureintheinvasionofbba } 
+ai_will_do = { 
+ factor = 10
+ } 
+available = { 
+BBA = { exists = no }
+EPM = { exists = yes }
+RIQ = { exists = yes }
+ } 
+completion_reward = { 
+add_political_power = 100
+add_stability = 0.1
+ } 
+
+ } 
+
+#Focus for Attack the AlliedHQ
+focus = { 
+id = FAL_attackthealliedhq
+icon = GFX_goal_generic_political_pressure
+x = 8
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_planningourexpansion } 
+mutually_exclusive = { focus = FAL_pacificationwiththeallies } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+news_event = redditreich.11
+
+add_ideas = FAL_allied_invasion
+ } 
+
+ } 
+
+#Focus for Reinforcing our legitimacy
+focus = { 
+id = FAL_reinforcingourlegitimacy
+icon = GFX_goal_generic_secret_weapon
+x = 12
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_thegreatparkor } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_manpower = -2000
+add_stability = -0.5
+add_ideas = FAL_totalitarian_regime
+ } 
+
+ } 
+
+#Focus for The enemy of my enemy is my friend
+focus = { 
+id = FAL_theenemyofmyenemyismyfriend
+icon = GFX_goal_tripartite_pact
+x = 8
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_attackthealliedhq } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+PRE = { any_enemy_country = add_opinion_modifier = { target = FAL modifier = potential_ally }
+
+BBA = { any_enemy_country = add_opinion_modifier = { target = FAL modifier = potential_ally }
+ } 
+
+ } 
+
+#Focus for Military Effort
+focus = { 
+id = FAL_militaryeffort
+icon = GFX_goal_generic_small_arms
+x = 14
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_reinforcingourlegitimacy } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_tech_bonus = { bonus = 0.5 uses = 2 category = artillery }
+ } 
+
+ } 
+
+#Focus for Naval Effort
+focus = { 
+id = FAL_navaleffort
+icon = GFX_goal_generic_navy_anti_submarine
+x = 14
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_militaryeffort } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_tech_bonus = { bonus = 0.5 uses = 2 category = submarine }
+
+add_tech_bonus = { bonus = 0.5 uses = 2 category = dreadnought }
+ } 
+
+ } 
+
+#Focus for Invading BBA
+focus = { 
+id = FAL_invadingbba
+icon = GFX_goal_generic_major_war
+x = 6
+y = 2
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_planningourexpansion } 
+ai_will_do = { 
+ factor = 10
+ } 
+available = { 
+BBA = { exists = yes }
+ } 
+completion_reward = { 
+declare_war_on = { target = BBA type = annex_everything }
+ } 
+
+ } 
+
+#Focus for The Great Parkor
+focus = { 
+id = FAL_thegreatparkor
+icon = GFX_goal_support_fascism
+x = 10
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_political_power = 50
+ } 
+
+ } 
+
+#Focus for The Divinity as our god and leader
+focus = { 
+id = FAL_thedivinityasourgodandleader
+icon = GFX_focus_hun_elect_a_king
+x = 16
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_childrenofreese } 
+mutually_exclusive = { focus = FAL_parkorisourfather } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+has_political_power > 100
+
+has_idea = FAL_the_new_government
+ } 
+completion_reward = { 
+add_popularity = { ideology = neutrality popularity = 0.1 }
+
+set_politics = { ruling_party = neutrality elections_allowed = no }
+
+create_country_leader = { name = "The Divinity" desc = "POLITICS_DIVINITY_DESC" picture = "Portrait_Divinity.dss" expire " "1965.1.1" ideology = despotism traits = { }
+ } 
+
+ } 
+
+#Focus for Modernizing our designs
+focus = { 
+id = FAL_modernizingourdesigns
+icon = GFX_goal_generic_trade
+x = 12
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FAL_navaleffort } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_tech_bonus = { bonus = 0.5 uses = 2 category = destroyed }
+
+add_tech_bonus = { bonus = 0.5 uses = 2 category = radar_tech }
+ } 
+
+ } 
+
+#End of focuses 
+ }

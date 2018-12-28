@@ -1,0 +1,53 @@
+focus_tree = { 
+id = SW
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = Star Wars 
+} 
+} 
+#Focus for The true fanbase
+focus = { 
+id = Star Wars_thetruefanbase
+icon = GFX_goal_generic_national_unity
+x = 7
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Go with the empire
+focus = { 
+id = Star Wars_gowiththeempire
+icon = GFX_goal_support_fascism
+x = 4
+y = 1
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Go with the republic
+focus = { 
+id = Star Wars_gowiththerepublic
+icon = GFX_goal_support_democracy
+x = 7
+y = 1
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#End of focuses 
+ }

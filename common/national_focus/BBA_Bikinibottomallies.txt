@@ -1,0 +1,915 @@
+focus_tree = { 
+id = Bikinibottomallies
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = BBA 
+} 
+} 
+#Focus for Go with Firefuego
+focus = { 
+id = BBA_gowithfirefuego
+icon = GFX_goal_support_democracy
+x = 3
+y = 0
+cost = 1
+available_if_capitulated = yes 
+mutually_exclusive = { focus = BBA_gowithparkor } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power = 50
+ } 
+
+ } 
+
+#Focus for Go with Parkor
+focus = { 
+id = BBA_gowithparkor
+icon = GFX_goal_support_fascism
+x = 15
+y = 0
+cost = 10
+available_if_capitulated = yes 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+mutually_exclusive = { focus = BBA_gowithfirefuego } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_political_power = 50
+
+add_opinion_modifier = { target = FAL modifier = same_ruler }
+
+set_politics = { ruling_party = fascism elections_allowed = no }
+
+create_country_leader = { name = "Parkor123456789" desc = "POLITICS_PARKOR_DESC" picture = "portrait_Parkor.dss" expire = "2030.1.1" ideology = fascism traits = { } }
+ } 
+
+ } 
+
+#Focus for The Fallout Menace
+focus = { 
+id = BBA_thefalloutmenace
+icon = GFX_goal_generic_small_arms
+x = 5
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_fightathome } 
+ai_will_do = { 
+ factor = 8
+ } 
+completion_reward = { 
+create_wargoal = { 
+type = annex_everything 
+target = FAL
+}
+ } 
+
+ } 
+
+#Focus for Reinforce Memesaw
+focus = { 
+id = BBA_reinforcememesaw
+icon = GFX_goal_tripartite_pact
+x = 1
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_gowithfirefuego } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_opinion_modifier= { 
+target = RIQ
+modifier = the_memesaw_pact
+}
+
+add_opinion_modifier= { 
+target = EPM
+modifier = the_memesaw_pact
+}
+ } 
+
+ } 
+
+#Focus for The November Reform
+focus = { 
+id = BBA_thenovemberreform
+icon = GFX_goal_generic_territory_or_war
+x = 5
+y = 1
+cost = 12
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_gowithfirefuego } 
+ai_will_do = { 
+ factor = 8
+ } 
+completion_reward = { 
+add_stability = 0.1
+ } 
+
+ } 
+
+#Focus for Leave Memesaw
+focus = { 
+id = BBA_leavememesaw
+icon = GFX_goal_generic_attack_allies
+x = 13
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_gowithparkor } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+remove_from_faction = BBA
+ } 
+
+ } 
+
+#Focus for Leader Cult
+focus = { 
+id = BBA_leadercult
+icon = GFX_focus_jap_showa_restoration
+x = 17
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_gowithparkor } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_popularity= { 
+ideology = fascism 
+popularity = 0.1 
+}
+ } 
+
+ } 
+
+#Focus for Meme Production Reform
+focus = { 
+id = BBA_memeproductionreform
+icon = GFX_goal_generic_construct_civilian
+x = 7
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_thenovemberreform } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+random_owned_controlled_state = { limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes }} 
+add_extra_state_shared_building_slots = 1
+add_building_construction = { type =
+industrial_complex level = 1 instant_build = yes } set_state_flag =
+REPLACE_ME_WITH_UNIQUE_IDENTIFIER }
+
+random_owned_controlled_state = { limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes }} 
+add_extra_state_shared_building_slots = 1
+add_building_construction = { type =
+arms_factory level = 1 instant_build = yes } set_state_flag =
+REPLACE_ME_WITH_UNIQUE_IDENTIFIER }
+ } 
+
+ } 
+
+#Focus for Democratic Knowlegde
+focus = { 
+id = BBA_democraticknowlegde
+icon = GFX_focus_generic_the_giant_wakes
+x = 4
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_thenovemberreform } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_popularity = { ideology = democratic popularity = 0.1 }
+ } 
+
+ } 
+
+#Focus for The December Reform
+focus = { 
+id = BBA_thedecemberreform
+icon = GFX_goal_rhineland
+x = 7
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_memeproductionreform } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_tech_bonus= {
+bonus = 0.5 
+uses = 2 
+category = armor 
+}
+ } 
+
+ } 
+
+#Focus for Fight at home
+focus = { 
+id = BBA_fightathome
+icon = GFX_goal_generic_defence
+x = 5
+y = 4
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_thedecemberreform } 
+mutually_exclusive = { focus = BBA_operationpatrick } 
+mutually_exclusive = { focus = BBA_operationpatrick } 
+mutually_exclusive = { focus = BBA_operationpatrick } 
+mutually_exclusive = { focus = BBA_operationpatrick } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = radar_tech 
+}
+ 
+army_experience = 10
+ } 
+
+ } 
+
+#Focus for Operation Patrick
+focus = { 
+id = BBA_operationpatrick
+icon = GFX_goal_generic_major_war
+x = 9
+y = 4
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_thedecemberreform } 
+mutually_exclusive = { focus = BBA_fightathome } 
+mutually_exclusive = { focus = BBA_fightathome } 
+mutually_exclusive = { focus = BBA_fightathome } 
+mutually_exclusive = { focus = BBA_fightathome } 
+mutually_exclusive = { focus = BBA_fightathome } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+army_experience = 10
+
+clr_country_flag = operation_patrick
+ } 
+
+ } 
+
+#Focus for Memesaw Internal Commerce
+focus = { 
+id = BBA_memesawinternalcommerce
+icon = GFX_goal_generic_construct_civ_factory
+x = 20
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_memefreemarket } 
+mutually_exclusive = { focus = BBA_anewmemesaw } 
+mutually_exclusive = { focus = BBA_anewmemesaw } 
+mutually_exclusive = { focus = BBA_anewmemesaw } 
+mutually_exclusive = { focus = BBA_anewmemesaw } 
+mutually_exclusive = { focus = BBA_anewmemesaw } 
+mutually_exclusive = { focus = BBA_anewmemesaw } 
+mutually_exclusive = { focus = BBA_anewmemesaw } 
+mutually_exclusive = { focus = BBA_anewmemesaw } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+EPM = { 
+add_ideas = BBA_liberalized_market 
+}
+
+RIQ = { 
+add_ideas = RIQ_liberalized_market 
+}
+ } 
+
+ } 
+
+#Focus for Trade with sphere leader
+focus = { 
+id = BBA_tradewithsphereleader
+icon = GFX_goal_generic_major_alliance
+x = 10
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_gowithparkor } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_ideas = BBA_merchant_dictator
+ } 
+
+ } 
+
+#Focus for Intersub Pact for Meme Development
+focus = { 
+id = BBA_intersubpactformemedevelopment
+icon = GFX_goal_generic_construction2
+x = 20
+y = 2
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_exploitingthekarmafarms } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+set_global_flag = ipmd
+
+news_event = redditreich.6
+
+18 = { add_building_construction = { type = industrial_complex province = 5291 level = 2 instant_build = yes } }
+ } 
+
+ } 
+
+#Focus for Meme Free Market
+focus = { 
+id = BBA_memefreemarket
+icon = GFX_goal_generic_positive_trade_relations
+x = 20
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_intersubpactformemedevelopment } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_ideas = BBA_liberalized_market
+ } 
+
+ } 
+
+#Focus for The Golden Age
+focus = { 
+id = BBA_thegoldenage
+icon = GFX_goal_generic_positive_trade_relations
+x = 20
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 10
+ } 
+available = { 
+date > 1943.1.1
+
+BIK = { 
+has_war = no 
+}
+
+PRE = { 
+has_war = no 
+}
+ } 
+completion_reward = { 
+add_stability = 0.1
+
+random_owned_state = { add_extra_state_shared_building_slots = 2 
+}
+ } 
+
+ } 
+
+#Focus for The 2nd Reform
+focus = { 
+id = BBA_the2ndreform
+icon = GFX_goal_generic_improve_relations
+x = 4
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_democraticknowlegde } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_political_power = 20
+
+add_stability = 0.1
+ } 
+
+ } 
+
+#Focus for Political Annexation
+focus = { 
+id = BBA_politicalannexation
+icon = GFX_goal_generic_propaganda
+x = 17
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_petitionforvassalage } 
+mutually_exclusive = { focus = BBA_destroytheothersplintergroups } 
+mutually_exclusive = { focus = BBA_destroytheothersplintergroups } 
+mutually_exclusive = { focus = BBA_destroytheothersplintergroups } 
+mutually_exclusive = { focus = BBA_destroytheothersplintergroups } 
+mutually_exclusive = { focus = BBA_destroytheothersplintergroups } 
+mutually_exclusive = { focus = BBA_destroytheothersplintergroups } 
+mutually_exclusive = { focus = BBA_destroytheothersplintergroups } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+EPM = { 
+add_popularity = { 
+ideology = fascism 
+popularity = 0.1 
+}
+
+RIQ = { 
+add_popularity = { 
+ideology = fascism 
+popularity = 0.1 
+}
+ } 
+
+ } 
+
+#Focus for Exploiting the karma farms
+focus = { 
+id = BBA_exploitingthekarmafarms
+icon = GFX_goal_generic_construction2
+x = 20
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_thegoldenage } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_resource = { 
+type = oil 
+amount = 8 
+state = 662 
+}
+ } 
+
+ } 
+
+#Focus for A New Memesaw
+focus = { 
+id = BBA_anewmemesaw
+icon = GFX_focus_generic_treaty
+x = 17
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_politicalannexation } 
+mutually_exclusive = { focus = BBA_memesawinternalcommerce } 
+mutually_exclusive = { focus = BBA_memesawinternalcommerce } 
+mutually_exclusive = { focus = BBA_memesawinternalcommerce } 
+mutually_exclusive = { focus = BBA_memesawinternalcommerce } 
+mutually_exclusive = { focus = BBA_memesawinternalcommerce } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+create_faction = 
+new_memesaw
+
+add_to_faction = 
+EPM
+
+add_to_faction = 
+RIQ
+ } 
+
+ } 
+
+#Focus for Destroy the other splinter groups
+focus = { 
+id = BBA_destroytheothersplintergroups
+icon = GFX_goal_generic_occupy_states_ongoing_war
+x = 13
+y = 4
+cost = 14
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_petitionforvassalage } 
+mutually_exclusive = { focus = BBA_politicalannexation } 
+mutually_exclusive = { focus = BBA_politicalannexation } 
+mutually_exclusive = { focus = BBA_politicalannexation } 
+mutually_exclusive = { focus = BBA_politicalannexation } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+declare_war_on = { 
+target = EPM
+type = annex_everything 
+}
+ 
+declare_war_on = { 
+target = RIQ
+type = annex_everything 
+}
+ } 
+
+ } 
+
+#Focus for Operation Squidward
+focus = { 
+id = BBA_operationsquidward
+icon = GFX_goal_generic_small_arms
+x = 6
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_thefalloutmenace } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+mutually_exclusive = { focus = BBA_operationplankton } 
+ai_will_do = { 
+ factor = 7
+ } 
+completion_reward = { 
+add_tech_bonus= {
+bonus = 0.5 
+uses = 2 
+category = infantry_weapons
+}
+ 
+add_tech_bonus= {
+ bonus = 0.5 
+uses = 2 
+category = artillery
+}
+ } 
+
+ } 
+
+#Focus for Operation Plankton
+focus = { 
+id = BBA_operationplankton
+icon = GFX_goal_generic_secret_weapon
+x = 4
+y = 6
+cost = 14
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_thefalloutmenace } 
+mutually_exclusive = { focus = BBA_operationsquidward } 
+mutually_exclusive = { focus = BBA_operationsquidward } 
+mutually_exclusive = { focus = BBA_operationsquidward } 
+mutually_exclusive = { focus = BBA_operationsquidward } 
+mutually_exclusive = { focus = BBA_operationsquidward } 
+mutually_exclusive = { focus = BBA_operationsquidward } 
+mutually_exclusive = { focus = BBA_operationsquidward } 
+mutually_exclusive = { focus = BBA_operationsquidward } 
+ai_will_do = { 
+ factor = 3
+ } 
+complete_tooltip = { 
+This might anger the rest of the world!
+ } 
+completion_reward = { 
+add_tech_bonus = { 
+bonus = 0.5 
+uses = 2 
+category = nuclear 
+}
+
+add_tech_bonus = { 
+bonus = 0.5 
+uses = 2 
+category = marine_tech 
+}
+
+country_event = { 
+days = 1 
+id = redditreich.13 
+}
+ } 
+
+ } 
+
+#Focus for An Unification?
+focus = { 
+id = BBA_anunification
+icon = GFX_goal_anschluss
+x = 0
+y = 4
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_theunityreform } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+mutually_exclusive = { focus = BBA_respectthethreestates } 
+ai_will_do = { 
+ factor = 5
+ } 
+available = { 
+strength_ratio = { tag = EPM ratio > 0.7 }
+
+strength_ratio = { tag = RIQ ratio > 0.7 }
+ } 
+completion_reward = { 
+country_event = { days = 1 id = redditreich.1 }
+ } 
+
+ } 
+
+#Focus for Respect the Three States
+focus = { 
+id = BBA_respectthethreestates
+icon = GFX_goal_tfv_strengthen_commonwealth_ties
+x = 2
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_theunityreform } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+mutually_exclusive = { focus = BBA_anunification } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_national_unity = 0.5
+
+add_stability = 0.2
+ } 
+
+ } 
+
+#Focus for The day has come.
+focus = { 
+id = BBA_thedayhascome
+icon = GFX_goal_generic_military_deal
+x = 9
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_operationpatrick } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+create_wargoal = { type = annex_everything target = BIK }
+ } 
+
+ } 
+
+#Focus for Abolish democracy
+focus = { 
+id = BBA_abolishdemocracy
+icon = GFX_focus_renounce_the_treaty_of_trianon
+x = 17
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_leadercult } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_popularity = { 
+ideology = fascism 
+popularity = 1 
+}
+
+add_stability = -0.2
+ } 
+
+ } 
+
+#Focus for The Final Union
+focus = { 
+id = BBA_thefinalunion
+icon = GFX_goal_generic_forceful_treaty
+x = 13
+y = 5
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_destroytheothersplintergroups } 
+ai_will_do = { 
+ factor = 10
+ } 
+available = { 
+has_government = fascism
+date > 1945.1.1
+ } 
+completion_reward = { 
+FAL = { 
+annex_country = {
+target = BBA 
+}
+ 
+
+}
+ } 
+
+ } 
+
+#Focus for Join Falloutmemes
+focus = { 
+id = BBA_joinfalloutmemes
+icon = GFX_goal_generic_dangerous_deal
+x = 13
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_leavememesaw } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+remove_from_faction = 
+BBA
+
+add_to_faction = 
+FAL
+ } 
+
+ } 
+
+#Focus for Petition for Vassalage
+focus = { 
+id = BBA_petitionforvassalage
+icon = GFX_focus_CZE_german_puppet
+x = 15
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_joinfalloutmemes } 
+prerequisite = { focus = BBA_abolishdemocracy } 
+ai_will_do = { 
+ factor = 5
+ } 
+available = { 
+date > 1940.1.1
+ } 
+completion_reward = { 
+FAL = {
+puppet = BBA 
+}
+ } 
+
+ } 
+
+#Focus for Meme Markets Investigation
+focus = { 
+id = BBA_mememarketsinvestigation
+icon = GFX_goal_continuous_increase_nu
+x = 1
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_reinforcememesaw } 
+ai_will_do = { 
+ factor = 9
+ } 
+completion_reward = { 
+add_to_tech_sharing_group = memesaw
+ } 
+
+ } 
+
+#Focus for The Unity Reform
+focus = { 
+id = BBA_theunityreform
+icon = GFX_focus_generic_treaty
+x = 1
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_mememarketsinvestigation } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+EPM = { 
+set_stability = 80 
+}
+
+RIQ = { 
+set_stability = 80 
+}
+ } 
+
+ } 
+
+#Focus for Population Pacts
+focus = { 
+id = BBA_populationpacts
+icon = GFX_focus_jap_cast_the_die
+x = 10
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = BBA_tradewithsphereleader } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+manpower = 10000
+ } 
+
+ } 
+
+#End of focuses 
+ }

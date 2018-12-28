@@ -1,0 +1,472 @@
+focus_tree = { 
+id = Exiledprequelmemers
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = EPM 
+} 
+} 
+#Focus for Free Meme Market
+focus = { 
+id = EPM_freemememarket
+icon = GFX_goal_generic_positive_trade_relations
+x = 14
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_thereforms } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_resource = { type = oil amount = 8 state = 662 }
+
+add_ideas = EMP_low_quality
+ } 
+
+ } 
+
+#Focus for Our origins
+focus = { 
+id = EPM_ourorigins
+icon = GFX_focus_generic_strike_at_democracy1
+x = 8
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_theawakening } 
+mutually_exclusive = { focus = EPM_thereforms } 
+mutually_exclusive = { focus = EPM_thereforms } 
+mutually_exclusive = { focus = EPM_thereforms } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_popularity = { ideology = fascism popularity = 0.1 }
+ } 
+
+ } 
+
+#Focus for The Awakening
+focus = { 
+id = EPM_theawakening
+icon = GFX_focus_generic_support_the_left_right
+x = 10
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power = 50
+ } 
+
+ } 
+
+#Focus for The Reforms
+focus = { 
+id = EPM_thereforms
+icon = GFX_goal_support_democracy
+x = 12
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_theawakening } 
+mutually_exclusive = { focus = EPM_ourorigins } 
+mutually_exclusive = { focus = EPM_ourorigins } 
+mutually_exclusive = { focus = EPM_ourorigins } 
+mutually_exclusive = { focus = EPM_ourorigins } 
+mutually_exclusive = { focus = EPM_ourorigins } 
+mutually_exclusive = { focus = EPM_ourorigins } 
+mutually_exclusive = { focus = EPM_ourorigins } 
+mutually_exclusive = { focus = EPM_ourorigins } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_popularity = { ideology = fascism popularity = 0.1 }
+ } 
+
+ } 
+
+#Focus for Splinter Army
+focus = { 
+id = EPM_splinterarmy
+icon = GFX_focus_generic_commonwealth_build_infantry
+x = 8
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_ourorigins } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine }
+
+add_tech_bonus = { bonus = 0.5 uses = 2 category = armor }
+ } 
+
+ } 
+
+#Focus for Reinforcing Memesaw
+focus = { 
+id = EPM_reinforcingmemesaw
+icon = GFX_goal_generic_improve_relations
+x = 6
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_ourorigins } 
+ai_will_do = { 
+ factor = 5
+ } 
+
+ } 
+
+#Focus for Meme-Military Complex
+focus = { 
+id = EPM_mememilitarycomplex
+icon = GFX_goal_generic_construct_mil_factory
+x = 8
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_splinterarmy } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+random_owned_controlled_state = { limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes }} 
+add_extra_state_shared_building_slots = 1
+add_building_construction = { type =
+arms_factory level = 1 instant_build = yes } set_state_flag =
+REPLACE_ME_WITH_UNIQUE_IDENTIFIER }
+
+random_owned_controlled_state = { limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes }} 
+add_extra_state_shared_building_slots = 1
+add_building_construction = { type =
+arms_factory level = 1 instant_build = yes } set_state_flag =
+REPLACE_ME_WITH_UNIQUE_IDENTIFIER }
+ } 
+
+ } 
+
+#Focus for Offer vassalage to Bikinibottomallies
+focus = { 
+id = EPM_offervassalagetobikinibottomallies
+icon = GFX_focus_generic_military_academy
+x = 6
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_reinforcingmemesaw } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+country_event = { days = 1 id = redditreich.6 }
+ } 
+
+ } 
+
+#Focus for Annex The_Cim
+focus = { 
+id = EPM_annexthecim
+icon = GFX_goal_generic_political_pressure
+x = 4
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_reinforcingmemesaw } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+create_wargoal =  type = annex_everything target = CIM }
+ } 
+
+ } 
+
+#Focus for We are NOT the Senate
+focus = { 
+id = EPM_wearenotthesenate
+icon = GFX_focus_generic_self_management
+x = 12
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_thereforms } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_stability = 0.1
+ } 
+
+ } 
+
+#Focus for Protection Pact with other members
+focus = { 
+id = EPM_protectionpactwithothermembers
+icon = GFX_goal_generic_intelligence_exchange
+x = 12
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_wearenotthesenate } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_to_tech_sharing_group = memesaw_pact
+ } 
+
+ } 
+
+#Focus for Expansion of our ports
+focus = { 
+id = EPM_expansionofourports
+icon = GFX_goal_generic_navy_battleship
+x = 14
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_freemememarket } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+navy_experience = 10
+add_tech_bonus = {  bonus = 0.5 uses = 2 category = marines }
+ } 
+
+ } 
+
+#Focus for Integrate Reddit_Inquisition
+focus = { 
+id = EPM_integrateredditinquisition
+icon = GFX_goal_generic_attack_allies
+x = 7
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_mememilitarycomplex } 
+prerequisite = { focus = EPM_offervassalagetobikinibottomallies } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+create_wargoal = { type = annex_everything target = RIQ }
+ } 
+
+ } 
+
+#Focus for Non-Agression Pact with Falloutmemes
+focus = { 
+id = EPM_nonagressionpactwithfalloutmemes
+icon = GFX_goal_molotov_ribbentrop_pact
+x = 13
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_protectionpactwithothermembers } 
+prerequisite = { focus = EPM_expansionofourports } 
+ai_will_do = { 
+ factor = 5
+ } 
+available = { 
+date > 1939.8.23
+ } 
+completion_reward = { 
+FAL = { country_event = { days = 1 id = redditreich.7 } }
+ } 
+
+ } 
+
+#Focus for The Unthinkable
+focus = { 
+id = EPM_theunthinkable
+icon = GFX_goal_generic_position_armies
+x = 7
+y = 5
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_integrateredditinquisition } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+date > 1943.1.1
+ } 
+completion_reward = { 
+create_wargoal = { type = annex_everything target = PRE }
+ } 
+
+ } 
+
+#Focus for Invade Falloutmemes
+focus = { 
+id = EPM_invadefalloutmemes
+icon = GFX_goal_generic_major_war
+x = 10
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_integrateredditinquisition } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+create_wargoal = { type = annex_everything target = FAL }
+ } 
+
+ } 
+
+#Focus for The Final Conciliation
+focus = { 
+id = EPM_thefinalconciliation
+icon = GFX_goal_generic_propaganda
+x = 15
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_integratefalloutmemesintoouralliance } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+annex_country = { target = BBA }
+
+annex_country = { target = RIQ }
+
+annex_country = { target = CIM }
+
+annex_country = { target = FAL }
+
+add_ideas = MEM_confused_burocracy
+
+add_ideas = MEM_rebellious_users
+ } 
+
+ } 
+
+#Focus for The Splinter Peninsula for Ports
+focus = { 
+id = EPM_thesplinterpeninsulaforports
+icon = GFX_goal_tripartite_pact
+x = 16
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_integratingfalloutmemesintothepact } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+FAL = { country_event = { days = 1 id = redditreich.21 }
+ } 
+
+ } 
+
+#Focus for Guaranteer of Peace in the east
+focus = { 
+id = EPM_guaranteerofpeaceintheeast
+icon = GFX_goal_generic_intelligence_exchange
+x = 16
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_thereforms } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+give_guarantee = BBA
+
+give_guarantee = FAL
+
+give_guarantee = RIQ
+
+give_guarantee = CIM
+ } 
+
+ } 
+
+#Focus for Integrating Falloutmemes into the pact
+focus = { 
+id = EPM_integratingfalloutmemesintothepact
+icon = GFX_goal_anschluss
+x = 16
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_guaranteerofpeaceintheeast } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_political_power = 50
+ } 
+
+ } 
+
+#Focus for Invasion of the Levant
+focus = { 
+id = EPM_invasionofthelevant
+icon = GFX_goal_generic_political_pressure
+x = 4
+y = 5
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_pushwest } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+create_wargoal = { type = annex_everything target = IZL }
+ } 
+
+ } 
+
+#Focus for Push West
+focus = { 
+id = EPM_pushwest
+icon = GFX_goal_generic_occupy_states_ongoing_war
+x = 4
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_annexthecim } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+country_event = { days = 1 id = redditreich.20 }
+ } 
+
+ } 
+
+#Focus for Integrate Falloutmemes into our alliance
+focus = { 
+id = EPM_integratefalloutmemesintoouralliance
+icon = GFX_goal_generic_improve_relations
+x = 15
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = EPM_nonagressionpactwithfalloutmemes } 
+prerequisite = { focus = EPM_thesplinterpeninsulaforports } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+FAL = { country_event = { days = 1 id = redditreich.22 }
+ } 
+
+ } 
+
+#End of focuses 
+ }

@@ -1,0 +1,11 @@
+focus_tree = { 
+id = Bikinibottomallies2
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = BBA 
+} 
+} 
+#End of focuses 
+ }

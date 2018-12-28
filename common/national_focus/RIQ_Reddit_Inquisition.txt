@@ -1,0 +1,409 @@
+focus_tree = { 
+id = Reddit_Inquisition
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = RIQ 
+} 
+} 
+#Focus for Removing the power from the battalions
+focus = { 
+id = RIQ_removingthepowerfromthebattalions
+icon = GFX_goal_generic_forceful_treaty
+x = 6
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_theoldalliance } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_ideas = RIQ_military_discontent
+
+add_stability = -0.1
+ } 
+
+ } 
+
+#Focus for Revise current meme production
+focus = { 
+id = RIQ_revisecurrentmemeproduction
+icon = GFX_goal_generic_construct_mil_factory
+x = 8
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_theoldalliance } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+random_owned_controlled_state = { limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } }
+add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } set_state_flag = REPLACE_ME_WITH_UNIQUE_IDENTIFIER }
+ } 
+
+ } 
+
+#Focus for Our spirit
+focus = { 
+id = RIQ_ourspirit
+icon = GFX_goal_generic_trade
+x = 14
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_thegreatcrusade } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_tech_bonus = { bonus = 0.5 uses = 2 category = construction } (TO BE CHANGED. PRODUCTION ISN´T THE NAME OF THE TECH)
+ } 
+
+ } 
+
+#Focus for Our origins
+focus = { 
+id = RIQ_ourorigins
+icon = GFX_goal_generic_political_pressure
+x = 10
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power = 50
+ } 
+
+ } 
+
+#Focus for The Old Alliance
+focus = { 
+id = RIQ_theoldalliance
+icon = GFX_goal_generic_national_unity
+x = 8
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_ourorigins } 
+mutually_exclusive = { focus = RIQ_thegreatcrusade } 
+mutually_exclusive = { focus = RIQ_thegreatcrusade } 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+add_national_unity
+
+add_opinion_modifier = { target = BBA modifier = alliance_reinforced }
+
+add_opinion_modifier = { target = EPM modifier = alliance_reinforced }
+ } 
+
+ } 
+
+#Focus for The Great Crusade
+focus = { 
+id = RIQ_thegreatcrusade
+icon = GFX_goal_support_fascism
+x = 12
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_ourorigins } 
+mutually_exclusive = { focus = RIQ_theoldalliance } 
+mutually_exclusive = { focus = RIQ_theoldalliance } 
+mutually_exclusive = { focus = RIQ_theoldalliance } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_popularity = { ideology = fascism popularity = 0.1 }
+ } 
+
+ } 
+
+#Focus for Global Inquisition
+focus = { 
+id = RIQ_globalinquisition
+icon = GFX_goal_support_fourth_int
+x = 11
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_modpowerreinstauration } 
+mutually_exclusive = { focus = RIQ_thehermitsub } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_ideas = RIQ_global_rev
+ } 
+
+ } 
+
+#Focus for Mod Power Reinstauration
+focus = { 
+id = RIQ_modpowerreinstauration
+icon = GFX_goal_support_communism
+x = 12
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_reinforcethebattalions } 
+mutually_exclusive = { focus = RIQ_theblackstarmarch } 
+mutually_exclusive = { focus = RIQ_theblackstarmarch } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+set_politics = { ruling_party = communism elections_allowed = no }
+
+remove_from_faction = RIQ
+ } 
+
+ } 
+
+#Focus for Abolition of the Battalions
+focus = { 
+id = RIQ_abolitionofthebattalions
+icon = GFX_goal_generic_small_arms
+x = 6
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_removingthepowerfromthebattalions } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+remove_ideas = RIQ_military_discontent
+
+add_ideas = RIQ_abolished_battalions
+ } 
+
+ } 
+
+#Focus for Light Laws on production
+focus = { 
+id = RIQ_lightlawsonproduction
+icon = GFX_goal_generic_positive_trade_relations
+x = 8
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_revisecurrentmemeproduction } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_ideas = RIQ_free_market
+ } 
+
+ } 
+
+#Focus for Checking user´s privilege
+focus = { 
+id = RIQ_checkingusersprivilege
+icon = GFX_goal_generic_forceful_treaty
+x = 16
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_thegreatcrusade } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability = -0.05
+
+add_ideas = RIQ_flawed_democracy
+
+add_opinion_modifier = { target = BBA modifier = abolished_democracy }
+
+add_opinion_modifier = { target = EPM modifier = unipersonal_dictatorship }
+ } 
+
+ } 
+
+#Focus for Reinforce the battalions
+focus = { 
+id = RIQ_reinforcethebattalions
+icon = GFX_focus_generic_military_academy
+x = 12
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_thegreatcrusade } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_ideas = RIQ_military_rights
+ } 
+
+ } 
+
+#Focus for Developing new strategies
+focus = { 
+id = RIQ_developingnewstrategies
+icon = GFX_goal_generic_allies_build_infantry
+x = 7
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_abolitionofthebattalions } 
+prerequisite = { focus = RIQ_lightlawsonproduction } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_tech_bonus = { bonus = 0.5 uses = 2 category = armor }
+
+add_tech_bonus = { bonus = 0.5 uses = 2 category =  infantry }
+ } 
+
+ } 
+
+#Focus for New Inquisition
+focus = { 
+id = RIQ_newinquisition
+icon = GFX_focus_generic_anti_fascist_diplomacy
+x = 7
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_developingnewstrategies } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+add_ideas = RIQ_new_inquisition
+
+
+add_opinion_modifier = { target = EMP modifier = contrary_opnions }
+
+create_wargoal = { type = annex_everything target = FAL }
+ } 
+
+ } 
+
+#Focus for The Hermit Sub
+focus = { 
+id = RIQ_thehermitsub
+icon = GFX_focus_generic_join_comintern
+x = 13
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_modpowerreinstauration } 
+mutually_exclusive = { focus = RIQ_globalinquisition } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability = -0.1
+
+
+add_ideas = RIQ_north_korea
+ } 
+
+ } 
+
+#Focus for The Black Star March
+focus = { 
+id = RIQ_theblackstarmarch
+icon = GFX_goal_rhineland
+x = 16
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_reinforcethebattalions } 
+mutually_exclusive = { focus = RIQ_modpowerreinstauration } 
+mutually_exclusive = { focus = RIQ_modpowerreinstauration } 
+mutually_exclusive = { focus = RIQ_modpowerreinstauration } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+set_politics = { ruling_party = fascism elections_allowed = no }
+
+create_country_leader = { name = "Black Star" desc = "POLITICS_BLACK_STAR_DESC" picture = "Portrait_Black_Star.dds" expire = "1965.1.1" ideology = fascism traits = { } }
+
+remove_from_faction = RIQ
+ } 
+
+ } 
+
+#Focus for Expand the Inquisition
+focus = { 
+id = RIQ_expandtheinquisition
+icon = GFX_goal_generic_war_with_comintern
+x = 12
+y = 5
+cost = 15
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_thehermitsub focus = RIQ_globalinquisition } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+date > 1945.1.1
+ } 
+completion_reward = { 
+all_neighbor_country = { add_popularity = { ideology = communism popularity = 0.1 }
+
+BBA = { start_civil_war = { ideology = communism size = 0.5 }
+
+EPM = { start_civil_war = { ideology = communism size = 0.5 }
+
+FAL = { start_civil_war = { ideology = communism size 0.1 }
+ } 
+
+ } 
+
+#Focus for Crusade against the Children of Reese
+focus = { 
+id = RIQ_crusadeagainstthechildrenofreese
+icon = GFX_goal_generic_territory_or_war
+x = 16
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_theblackstarmarch } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+create_wargoal = { type = annex_everything target = FAL }
+ } 
+
+ } 
+
+#Focus for Unifying the splinter groups
+focus = { 
+id = RIQ_unifyingthesplintergroups
+icon = GFX_goal_generic_major_war
+x = 16
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = RIQ_theblackstarmarch } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+create_wargoal = { type = annex_everything target = EMP }
+
+create_wargoal = { type = annex_everything target = BBA }
+
+remove_from_faction = RIQ
+ } 
+
+ } 
+
+#End of focuses 
+ }

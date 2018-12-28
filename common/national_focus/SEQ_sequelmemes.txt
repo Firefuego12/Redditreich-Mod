@@ -1,0 +1,383 @@
+focus_tree = { 
+id = sequelmemes
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = SEQ 
+} 
+} 
+#Focus for The force awakens
+focus = { 
+id = SEQ_theforceawakens
+icon = GFX_goal_generic_demand_territory
+x = 9
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Go with the New Republic
+focus = { 
+id = SEQ_gowiththenewrepublic
+icon = GFX_goal_support_democracy
+x = 11
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_theforceawakens } 
+mutually_exclusive = { focus = SEQ_gowiththefirstorder } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Go with the First Order
+focus = { 
+id = SEQ_gowiththefirstorder
+icon = GFX_goal_support_fascism
+x = 7
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_theforceawakens } 
+mutually_exclusive = { focus = SEQ_gowiththenewrepublic } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for x
+focus = { 
+id = SEQ_x
+icon = GFX_goal_unknown
+x = 25
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for x
+focus = { 
+id = SEQ_x
+icon = GFX_goal_unknown
+x = 2
+y = 12
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for invite game of thrones
+focus = { 
+id = SEQ_invitegameofthrones
+icon = GFX_goal_generic_national_unity
+x = 11
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_developtheresistance } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for A new democratic path
+focus = { 
+id = SEQ_anewdemocraticpath
+icon = GFX_goal_generic_occupy_states_coastal
+x = 14
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_remaindemocratic } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Align anthology memes
+focus = { 
+id = SEQ_alignanthologymemes
+icon = GFX_goal_generic_positive_trade_relations
+x = 3
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_forgeanewpath } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Align OTmemes
+focus = { 
+id = SEQ_alignotmemes
+icon = GFX_goal_generic_positive_trade_relations
+x = 5
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_forgeanewpath } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Bureaucratic democracy
+focus = { 
+id = SEQ_bureaucraticdemocracy
+icon = GFX_goal_generic_neutrality_focus
+x = 14
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_anewdemocraticpath } 
+mutually_exclusive = { focus = SEQ_fulldemocracy } 
+mutually_exclusive = { focus = SEQ_moddemocracy } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Mod democracy
+focus = { 
+id = SEQ_moddemocracy
+icon = GFX_focus_smiling_buddha
+x = 16
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_anewdemocraticpath } 
+mutually_exclusive = { focus = SEQ_bureaucraticdemocracy } 
+mutually_exclusive = { focus = SEQ_bureaucraticdemocracy } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Evolve democracy
+focus = { 
+id = SEQ_evolvedemocracy
+icon = GFX_goal_support_communism
+x = 18
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_gowiththenewrepublic } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Recreate the Resistance
+focus = { 
+id = SEQ_recreatetheresistance
+icon = GFX_goal_generic_alliance
+x = 9
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_unitewithourtraditionalallies } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Forge a new path
+focus = { 
+id = SEQ_forgeanewpath
+icon = GFX_goal_generic_national_unity
+x = 5
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_thelastdayoftherepublic } 
+mutually_exclusive = { focus = SEQ_unitewithourtraditionalallies } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Integrate our smaller allies
+focus = { 
+id = SEQ_integrateoursmallerallies
+icon = GFX_goal_molotov_ribbentrop_pact
+x = 5
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_alignotmemes } 
+prerequisite = { focus = SEQ_alignanthologymemes } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Protect our rear
+focus = { 
+id = SEQ_protectourrear
+icon = GFX_goal_generic_dangerous_deal
+x = 7
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_thelastdayoftherepublic } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Raw, untamed power!
+focus = { 
+id = SEQ_rawuntamedpower
+icon = GFX_goal_generic_position_armies
+x = 7
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_protectourrear focus = SEQ_recreatetheresistance } 
+prerequisite = { focus = SEQ_integrateoursmallerallies } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Remain democratic
+focus = { 
+id = SEQ_remaindemocratic
+icon = GFX_goal_generic_war_with_comintern
+x = 11
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_gowiththenewrepublic } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for United, now and always!
+focus = { 
+id = SEQ_unitednowandalways
+icon = GFX_focus_jap_manchurian_project
+x = 9
+y = 8
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_invadetheprequels } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Full democracy
+focus = { 
+id = SEQ_fulldemocracy
+icon = GFX_goal_generic_national_unity
+x = 12
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_anewdemocraticpath } 
+prerequisite = { focus = SEQ_moddemocracy } 
+mutually_exclusive = { focus = SEQ_bureaucraticdemocracy } 
+mutually_exclusive = { focus = SEQ_ } 
+mutually_exclusive = { focus = SEQ_bureaucraticdemocracy } 
+mutually_exclusive = { focus = SEQ_bureaucraticdemocracy } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The last day of the republic
+focus = { 
+id = SEQ_thelastdayoftherepublic
+icon = GFX_thelastdayoftherepublic
+x = 7
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_gowiththefirstorder } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Unite with our traditional allies
+focus = { 
+id = SEQ_unitewithourtraditionalallies
+icon = GFX_goal_tripartite_pact
+x = 9
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_thelastdayoftherepublic focus = SEQ_remaindemocratic } 
+mutually_exclusive = { focus = SEQ_forgeanewpath } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Invade the prequels
+focus = { 
+id = SEQ_invadetheprequels
+icon = GFX_goal_generic_major_war
+x = 9
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_rawuntamedpower focus = SEQ_invitegameofthrones } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Develop the resistance
+focus = { 
+id = SEQ_developtheresistance
+icon = GFX_goal_generic_improve_relations
+x = 11
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SEQ_recreatetheresistance } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#End of focuses 
+ }

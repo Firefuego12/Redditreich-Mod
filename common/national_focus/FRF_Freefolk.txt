@@ -1,0 +1,973 @@
+focus_tree = { 
+id = Freefolk
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = FRF 
+} 
+} 
+#Focus for Tensions on the southern border:
+focus = { 
+id = FRF_tensionsonthesouthernborder
+icon = GFX_focus_prc_infiltration
+x = 2
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for We are the piracy experts, after all...
+focus = { 
+id = FRF_wearethepiracyexpertsafterall
+icon = GFX_goal_generic_amphibious_assault
+x = 39
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_redwynefleetinbeing focus = FRF_euronsdragons focus = FRF_tradeblockage } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Fire and Blood
+focus = { 
+id = FRF_fireandblood
+icon = GFX_goal_generic_territory_or_war
+x = 8
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_afellowsequel } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Offseason continues:
+focus = { 
+id = FRF_theoffseasoncontinues
+icon = GFX_goal_unknown
+x = 9
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 10
+ } 
+completion_reward = { 
+country_event= {
+days = 1 
+id = redditreich.20 
+}
+ } 
+
+ } 
+
+#Focus for A fellow sequel
+focus = { 
+id = FRF_afellowsequel
+icon = GFX_goal_generic_attack_allies
+x = 7
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_theoffseasoncontinues } 
+mutually_exclusive = { focus = FRF_afellowsequel } 
+mutually_exclusive = { focus = FRF_afellowsequel } 
+mutually_exclusive = { focus = FRF_gowiththeoldmemegods } 
+mutually_exclusive = { focus = FRF_afellowsequel } 
+mutually_exclusive = { focus = FRF_afellowsequel } 
+mutually_exclusive = { focus = FRF_afellowsequel } 
+mutually_exclusive = { focus = FRF_afellowsequel } 
+mutually_exclusive = { focus = FRF_afellowsequel } 
+mutually_exclusive = { focus = FRF_afellowsequel } 
+ai_will_do = { 
+ factor = 20
+ } 
+
+ } 
+
+#Focus for Go with the Old (meme) gods
+focus = { 
+id = FRF_gowiththeoldmemegods
+icon = GFX_goal_generic_alliance
+x = 11
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_theoffseasoncontinues } 
+mutually_exclusive = { focus = FRF_afellowsequel } 
+mutually_exclusive = { focus = FRF_afellowsequel } 
+mutually_exclusive = { focus = FRF_afellowsequel } 
+ai_will_do = { 
+ factor = 60
+ } 
+
+ } 
+
+#Focus for When you play the game of memes...
+focus = { 
+id = FRF_whenyouplaythegameofmemes
+icon = GFX_focus_jap_cast_the_die
+x = 7
+y = 8
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Or you die...
+focus = { 
+id = FRF_oryoudie
+icon = GFX_goal_tfv_sever_ties_with_uk
+x = 9
+y = 10
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_whenyouplaythegameofmemes } 
+mutually_exclusive = { focus = FRF_youwin } 
+mutually_exclusive = { focus = FRF_youwin } 
+mutually_exclusive = { focus = FRF_youwin } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for You win...
+focus = { 
+id = FRF_youwin
+icon = GFX_goal_tfv_strengthen_commonwealth_ties
+x = 5
+y = 10
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_whenyouplaythegameofmemes } 
+mutually_exclusive = { focus = FRF_oryoudie } 
+mutually_exclusive = { focus = FRF_oryoudie } 
+mutually_exclusive = { focus = FRF_oryoudie } 
+mutually_exclusive = { focus = FRF_oryoudie } 
+mutually_exclusive = { focus = FRF_oryoudie } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for State of the Freefolk
+focus = { 
+id = FRF_stateofthefreefolk
+icon = GFX_goal_generic_demand_territory
+x = 18
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power= 300
+ } 
+
+ } 
+
+#Focus for Winter is coming...
+focus = { 
+id = FRF_winteriscoming
+icon = GFX_goal_rhineland
+x = 3
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_webringthestorm } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for ...and r/freefolk is coming with it!
+focus = { 
+id = FRF_andrfreefolkiscomingwithit
+icon = GFX_goal_generic_occupy_states_ongoing_war
+x = 3
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_winteriscoming } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Claims on Southern subreddit territory:
+focus = { 
+id = FRF_claimsonsouthernsubredditterritory
+icon = GFX_goal_generic_forceful_treaty
+x = 6
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_afellowsequel } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+declare_war_on= { 
+target = PRE 
+type = take_state_focus 
+generator = { 19 31 22 32 21 }
+
+}
+ } 
+
+ } 
+
+#Focus for Embargo r/catapultmemes
+focus = { 
+id = FRF_embargorcatapultmemes
+icon = GFX_goal_generic_political_pressure
+x = 12
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_gowiththeoldmemegods } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Replenish the Night's Watch
+focus = { 
+id = FRF_replenishthenightswatch
+icon = GFX_goal_generic_radar
+x = 14
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_gowiththeoldmemegods } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_manpower= 10,000
+ } 
+
+ } 
+
+#Focus for Propaganda Efforts:
+focus = { 
+id = FRF_propagandaefforts
+icon = GFX_goal_generic_propaganda
+x = 10
+y = 3
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_gowiththeoldmemegods } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Fortify the wall:
+focus = { 
+id = FRF_fortifythewall
+icon = GFX_goal_generic_fortify_city
+x = 1
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_braceforthestorm } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Seal the gates with the old magic.
+focus = { 
+id = FRF_sealthegateswiththeoldmagic
+icon = GFX_goal_generic_construct_military
+x = 1
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_fortifythewall } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Brace for the storm...
+focus = { 
+id = FRF_braceforthestorm
+icon = GFX_focus_generic_coastal_fort
+x = 1
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_tensionsonthesouthernborder } 
+mutually_exclusive = { focus = FRF_webringthestorm } 
+mutually_exclusive = { focus = FRF_webringthestorm } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for We bring the storm!
+focus = { 
+id = FRF_webringthestorm
+icon = GFX_focus_wonderweapons
+x = 3
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_tensionsonthesouthernborder } 
+mutually_exclusive = { focus = FRF_braceforthestorm } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Fascism
+focus = { 
+id = FRF_fascism
+icon = GFX_fascism
+x = 19
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_stateofthefreefolk } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_popularity= { 
+ideology = fascism 
+popularity = 0.3 
+}
+ } 
+
+ } 
+
+#Focus for Back to the monarchy
+focus = { 
+id = FRF_backtothemonarchy
+icon = GFX_backtothemonarchy
+x = 21
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_stateofthefreefolk } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_popularity= { 
+ideology = neutrality 
+popularity = 0.3 
+}
+ } 
+
+ } 
+
+#Focus for Communism
+focus = { 
+id = FRF_communism
+icon = GFX_communism
+x = 17
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_stateofthefreefolk } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_popularity= { 
+ideology = communism 
+popularity = 0.3 
+}
+ } 
+
+ } 
+
+#Focus for Anarchic Democracy
+focus = { 
+id = FRF_anarchicdemocracy
+icon = GFX_anarchicdemocracy
+x = 15
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_stateofthefreefolk } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_popularity= { 
+ideology = democracy 
+popularity = 0.3 
+}
+ } 
+
+ } 
+
+#Focus for Lead the charge of shitposters!
+focus = { 
+id = FRF_leadthechargeofshitposters
+icon = GFX_goal_generic_territory_or_war
+x = 12
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_propagandaefforts } 
+prerequisite = { focus = FRF_replenishthenightswatch } 
+prerequisite = { focus = FRF_embargorcatapultmemes } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+declare_war_on= { 
+target = CAT 
+type = puppet_wargoal 
+}
+ } 
+
+ } 
+
+#Focus for Consolidate our rule
+focus = { 
+id = FRF_consolidateourrule
+icon = GFX_goal_generic_major_alliance
+x = 18
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_anarchicdemocracy focus = FRF_communism focus = FRF_fascism focus = FRF_backtothemonarchy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability= 1 
+add_war_support= 10
+ } 
+
+ } 
+
+#Focus for The economy of shitposts
+focus = { 
+id = FRF_theeconomyofshitposts
+icon = GFX_goal_generic_intelligence_exchange
+x = 26
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Meme-war profiteering
+focus = { 
+id = FRF_memewarprofiteering
+icon = GFX_goal_generic_positive_trade_relations
+x = 24
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_theeconomyofshitposts } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Streamlining the subreddit
+focus = { 
+id = FRF_streamliningthesubreddit
+icon = GFX_goal_generic_production2
+x = 28
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_theeconomyofshitposts } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Infrastructure interface
+focus = { 
+id = FRF_infrastructureinterface
+icon = GFX_goal_generic_production
+x = 29
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_streamliningthesubreddit } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Construct citadels in the country
+focus = { 
+id = FRF_constructcitadelsinthecountry
+icon = GFX_goal_tfv_generic_tech_sharing
+x = 26
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_basicremilitarization } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Pay off the Moderators of Braavos and the banking clan
+focus = { 
+id = FRF_payoffthemoderatorsofbraavosandthebankingclan
+icon = GFX_goal_generic_improve_relations
+x = 25
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_memewarprofiteering focus = FRF_streamliningthesubreddit } 
+mutually_exclusive = { focus = FRF_investinourselves } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Invest in ourselves
+focus = { 
+id = FRF_investinourselves
+icon = GFX_focus_generic_aluminum
+x = 27
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_memewarprofiteering focus = FRF_streamliningthesubreddit } 
+mutually_exclusive = { focus = FRF_payoffthemoderatorsofbraavosandthebankingclan } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Renew the lend-lease program
+focus = { 
+id = FRF_renewthelendleaseprogram
+icon = GFX_focus_generic_the_giant_wakes
+x = 23
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_memewarprofiteering } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Basic Re-militarization
+focus = { 
+id = FRF_basicremilitarization
+icon = GFX_goal_generic_construct_mil_factory
+x = 26
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_qualityoflifeconstruction } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Quality-of-life construction
+focus = { 
+id = FRF_qualityoflifeconstruction
+icon = GFX_goal_generic_construct_civ_factory
+x = 26
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_renewthelendleaseprogram } 
+prerequisite = { focus = FRF_infrastructureinterface } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Awaken the Watch
+focus = { 
+id = FRF_awakenthewatch
+icon = GFX_goal_rhineland
+x = 33
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+army_experience= 25
+ } 
+
+ } 
+
+#Focus for Revive the Reavers...
+focus = { 
+id = FRF_revivethereavers
+icon = GFX_goal_generic_navy_battleship
+x = 39
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+navy_experience= 25
+ } 
+
+ } 
+
+#Focus for The Dance of Dragons
+focus = { 
+id = FRF_thedanceofdragons
+icon = GFX_goal_generic_air_fighter2
+x = 45
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Trade blockage
+focus = { 
+id = FRF_tradeblockage
+icon = GFX_goal_generic_navy_anti_submarine
+x = 41
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_thesaltontheseastonechair } 
+mutually_exclusive = { focus = FRF_redwynefleetinbeing } 
+mutually_exclusive = { focus = FRF_euronsdragons } 
+mutually_exclusive = { focus = FRF_ } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Wealth of the westerlands
+focus = { 
+id = FRF_wealthofthewesterlands
+icon = GFX_focus_generic_steel
+x = 26
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_constructcitadelsinthecountry } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Chicken Provisions
+focus = { 
+id = FRF_chickenprovisions
+icon = GFX_focus_YUG_zmaj
+x = 33
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_awakenthewatch } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Mountain's male vitality supplements
+focus = { 
+id = FRF_themountainsmalevitalitysupplements
+icon = GFX_goal_generic_scientific_exchange
+x = 33
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_chickenprovisions } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Blazing Targaryen Saddles
+focus = { 
+id = FRF_blazingtargaryensaddles
+icon = GFX_goal_generic_army_doctrines
+x = 45
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_thedanceofdragons } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Dothraki mobile warfare
+focus = { 
+id = FRF_dothrakimobilewarfare
+icon = GFX_goal_generic_cavalry
+x = 30
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_themountainsmalevitalitysupplements } 
+mutually_exclusive = { focus = FRF_wildlinghordes } 
+mutually_exclusive = { focus = FRF_qyburnsdownvoteballista } 
+mutually_exclusive = { focus = FRF_bronnsbattleplans } 
+mutually_exclusive = { focus = FRF_ } 
+mutually_exclusive = { focus = FRF_wildlinghordes } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Wildling Hordes
+focus = { 
+id = FRF_wildlinghordes
+icon = GFX_focus_generic_little_entente
+x = 32
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_themountainsmalevitalitysupplements } 
+mutually_exclusive = { focus = FRF_dothrakimobilewarfare } 
+mutually_exclusive = { focus = FRF_qyburnsdownvoteballista } 
+mutually_exclusive = { focus = FRF_bronnsbattleplans } 
+mutually_exclusive = { focus = FRF_ } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Qyburn's downvote Ballista
+focus = { 
+id = FRF_qyburnsdownvoteballista
+icon = GFX_goal_generic_army_artillery2
+x = 34
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_themountainsmalevitalitysupplements } 
+mutually_exclusive = { focus = FRF_dothrakimobilewarfare } 
+mutually_exclusive = { focus = FRF_wildlinghordes } 
+mutually_exclusive = { focus = FRF_bronnsbattleplans } 
+mutually_exclusive = { focus = FRF_ } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Bronn's Battle-plans
+focus = { 
+id = FRF_bronnsbattleplans
+icon = GFX_goal_generic_army_doctrines
+x = 36
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_themountainsmalevitalitysupplements } 
+mutually_exclusive = { focus = FRF_dothrakimobilewarfare } 
+mutually_exclusive = { focus = FRF_wildlinghordes } 
+mutually_exclusive = { focus = FRF_qyburnsdownvoteballista } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Final industrial push.
+focus = { 
+id = FRF_finalindustrialpush
+icon = GFX_goal_generic_construct_mil_factory
+x = 33
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_dothrakimobilewarfare focus = FRF_wildlinghordes focus = FRF_qyburnsdownvoteballista focus = FRF_bronnsbattleplans } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The salt on the Seastone chair
+focus = { 
+id = FRF_thesaltontheseastonechair
+icon = GFX_goal_generic_construct_naval_dockyard
+x = 39
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_revivethereavers } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Viserion
+focus = { 
+id = FRF_viserion
+icon = GFX_goal_generic_air_naval_bomber
+x = 47
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_threedragonsthreedoctrines } 
+mutually_exclusive = { focus = FRF_drogon } 
+mutually_exclusive = { focus = FRF_rhaegal } 
+mutually_exclusive = { focus = FRF_ } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Redwyne fleet in being
+focus = { 
+id = FRF_redwynefleetinbeing
+icon = GFX_goal_generic_navy_cruiser
+x = 37
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_thesaltontheseastonechair } 
+mutually_exclusive = { focus = FRF_redwynefleetinbeing } 
+mutually_exclusive = { focus = FRF_euronsdragons } 
+mutually_exclusive = { focus = FRF_ } 
+mutually_exclusive = { focus = FRF_redwynefleetinbeing } 
+mutually_exclusive = { focus = FRF_tradeblockage } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Euron's Dragons
+focus = { 
+id = FRF_euronsdragons
+icon = GFX_goal_generic_navy_carrier
+x = 39
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_thesaltontheseastonechair } 
+mutually_exclusive = { focus = FRF_redwynefleetinbeing } 
+mutually_exclusive = { focus = FRF_redwynefleetinbeing } 
+mutually_exclusive = { focus = FRF_redwynefleetinbeing } 
+mutually_exclusive = { focus = FRF_tradeblockage } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Three dragons, Three doctrines
+focus = { 
+id = FRF_threedragonsthreedoctrines
+icon = GFX_goal_generic_air_doctrine
+x = 45
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_blazingtargaryensaddles } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+air_experience= 50 
+add_political_power= 150
+ } 
+
+ } 
+
+#Focus for Drogon
+focus = { 
+id = FRF_drogon
+icon = GFX_goal_generic_air_bomber
+x = 43
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_threedragonsthreedoctrines } 
+mutually_exclusive = { focus = FRF_drogon } 
+mutually_exclusive = { focus = FRF_rhaegal } 
+mutually_exclusive = { focus = FRF_ } 
+mutually_exclusive = { focus = FRF_drogon } 
+mutually_exclusive = { focus = FRF_viserion } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Rhaegal
+focus = { 
+id = FRF_rhaegal
+icon = GFX_goal_generic_air_fighter2
+x = 45
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = FRF_threedragonsthreedoctrines } 
+mutually_exclusive = { focus = FRF_drogon } 
+mutually_exclusive = { focus = FRF_viserion } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#End of focuses 
+ }

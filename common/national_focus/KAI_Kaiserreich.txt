@@ -1,0 +1,129 @@
+focus_tree = { 
+id = Kaiserreich
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = KAI 
+} 
+} 
+#Focus for Remove the Anti-Syndicalists
+focus = { 
+id = KAI_removetheantisyndicalists
+icon = GFX_goal_unknown
+x = 0
+y = 2
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Huey Long Gets Elected
+focus = { 
+id = KAI_hueylonggetselected
+icon = GFX_goal_unknown
+x = 14
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = KAI_authoritarianvictory } 
+
+ } 
+
+#Focus for The Hohenzollerns Keep Power
+focus = { 
+id = KAI_thehohenzollernskeeppower
+icon = GFX_goal_unknown
+x = 16
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = KAI_authoritarianvictory } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Start a Counter Revolution
+focus = { 
+id = KAI_startacounterrevolution
+icon = GFX_focus_ger_bulwark_against_bolshevism
+x = 18
+y = 4
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 3
+ } 
+
+ } 
+
+#Focus for Syndicalist Victory
+focus = { 
+id = KAI_syndicalistvictory
+icon = GFX_syndicalistvictory
+x = 4
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = KAI_deathofthekaiser } 
+
+ } 
+
+#Focus for The Ceasar of the Kaiserreich
+focus = { 
+id = KAI_theceasarofthekaiserreich
+icon = GFX_goal_unknown
+x = 12
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = KAI_authoritarianvictory } 
+
+ } 
+
+#Focus for Death of the Kaiser
+focus = { 
+id = KAI_deathofthekaiser
+icon = GFX_goal_unknown
+x = 8
+y = 0
+cost = 10
+available_if_capitulated = yes 
+mutually_exclusive = { focus = KAI_thekaiserprevails } 
+
+ } 
+
+#Focus for The Kaiser Prevails!
+focus = { 
+id = KAI_thekaiserprevails
+icon = GFX_goal_unknown
+x = 16
+y = 0
+cost = 10
+available_if_capitulated = yes 
+mutually_exclusive = { focus = KAI_deathofthekaiser } 
+
+ } 
+
+#Focus for Authoritarian Victory
+focus = { 
+id = KAI_authoritarianvictory
+icon = GFX_goal_generic_neutrality_focus
+x = 14
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = KAI_thekaiserprevails focus = KAI_deathofthekaiser } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#End of focuses 
+ }
